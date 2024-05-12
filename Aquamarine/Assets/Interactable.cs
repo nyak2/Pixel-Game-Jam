@@ -25,7 +25,7 @@ public class Interactable : MonoBehaviour
 
     private void OnInteract(GameObject gameObject)
     {
-        
+        Debug.Log("Interacting with " + gameObject.name);
     }
 
 }
