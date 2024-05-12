@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class JetStream : PlayerAbilities
 {
-    protected override void UseAbility(PlayerAbilities ability)
+    public override void UseAbility()
     {
+        Debug.Log("Crashing Stream");
+    }
 
+    public override string ToString()
+    {
+        return "JetStream";
     }
 }

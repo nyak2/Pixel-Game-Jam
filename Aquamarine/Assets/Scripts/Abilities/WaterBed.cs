@@ -4,8 +4,21 @@ using UnityEngine;
 
 public class WaterBed : PlayerAbilities
 {
-    protected override void UseAbility(PlayerAbilities ability)
+    public override void UseAbility()
+    {
+        Debug.Log("Deploying Platform");
+        PlayerAttribute.ChangeAbilityUsageStatus(true);
+        CreateWaterPlatform();
+    }
+    private void CreateWaterPlatform()
     {
 
+        PlayerAttribute.SpawnWaterPlatform();
     }
+
+    public override string ToString()
+    {
+        return "Water Bed";
+    }
+
 }

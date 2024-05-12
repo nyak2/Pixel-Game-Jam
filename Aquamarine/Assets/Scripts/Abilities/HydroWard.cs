@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class HydroWard : PlayerAbilities
 {
-    protected override void UseAbility(PlayerAbilities ability)
+    public override void UseAbility()
     {
-
+        Debug.Log("Shield Going Out");
     }
+
+    public override string ToString()
+    {
+        return "Hydro Ward";
+    }
+
 }
