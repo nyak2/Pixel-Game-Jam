@@ -6,22 +6,30 @@ using UnityEngine;
 
 public class PlayerAttribute : MonoBehaviour
 {
+    public static PlayerAttribute instance;
     // WaterBed, JetStream, HydroWard, AquaHop
     private List<PlayerAbilities> abilities = new List<PlayerAbilities>();
     public PlayerAbilities currentAbility;
     private static bool isAbilityBeingUsed = false;
     private int i = 0;
+
+    private static Transform tempWaterCheck;
+    [SerializeField] private Transform waterCheck;
+    [SerializeField] private LayerMask waterLayer;
+
     private static GameObject waterPlatform;
     [SerializeField] private GameObject waterPlat;
 
     private void Start()
     {
+        instance = this;
         abilities.Add(new WaterBed());
         abilities.Add(new JetStream());
         abilities.Add(new HydroWard());
         abilities.Add(new AquaHop());
         currentAbility = abilities[0];
         waterPlatform = waterPlat;
+        tempWaterCheck = waterCheck;
     }
 
     // Update is called once per frame
@@ -32,12 +40,19 @@ public class PlayerAttribute : MonoBehaviour
 
     public void UpdateAbility()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (IsOnWaterSource())
         {
-            if (!isAbilityBeingUsed)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                currentAbility.UseAbility();
-
+                if (!isAbilityBeingUsed)
+                {
+                    currentAbility.UseAbility();
+                }
+                else
+                {
+                    Debug.Log("Clearing Abilities");
+                    ClearAllAbilities();
+                }
             }
         }
 
@@ -87,6 +102,22 @@ public class PlayerAttribute : MonoBehaviour
         currentAbility = abilities[i];
     }
 
+    public bool IsCurrAbilityAquaHop()
+    {
+        return currentAbility == abilities[3];
+    }
+
+    public static void ClearAllAbilities()
+    {
+        // Clears all abilities on the map when the player dies or press interact again
+        isAbilityBeingUsed = false;
+    }
+
+    public bool IsOnWaterSource()
+    {
+        return Physics2D.OverlapCircle(waterCheck.position, 0.2f, waterLayer);
+    }
+
     public static void ChangeAbilityUsageStatus(bool b)
     {
         isAbilityBeingUsed = b;
@@ -94,11 +125,18 @@ public class PlayerAttribute : MonoBehaviour
 
     public async static void SpawnWaterPlatform()
     {
-        GameObject tempPlatform = Instantiate(waterPlatform, new Vector3(0,0,0), Quaternion.identity);
+        Vector2 spawnPos = ObtainSpawnPosition();
+
+        GameObject tempPlatform = Instantiate(waterPlatform, new Vector3(spawnPos.x,spawnPos.y,0), Quaternion.identity);
         await Task.Delay(3000);
         Destroy(tempPlatform);
         ChangeAbilityUsageStatus(false);
        
+    }
+
+    private static Vector2 ObtainSpawnPosition()
+    {
+        return new Vector2(tempWaterCheck.position.x, tempWaterCheck.position.y + 2f);
     }
 
 }
