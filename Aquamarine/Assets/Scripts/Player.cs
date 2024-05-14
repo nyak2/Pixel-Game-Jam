@@ -44,10 +44,14 @@ public class Player : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && (isGrounded() || PlayerAttribute.instance.IsOnWaterSource()))
+        if (Input.GetButtonDown("Jump") && (isGrounded() || 
+            PlayerAttribute.instance.IsOnWaterSource() || 
+            PlayerAttribute.instance.IsOnWaterPlatform()))
         {
             float tempJumpPower = jumpingPower;
-            if (PlayerAttribute.instance.IsOnWaterSource()) jumpingPower *= jumpingMultiplier;
+            if (PlayerAttribute.instance.IsOnWaterSource() || PlayerAttribute.instance.IsOnWaterPlatform())
+                jumpingPower *= jumpingMultiplier;
+
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             jumpingPower = tempJumpPower;
         }

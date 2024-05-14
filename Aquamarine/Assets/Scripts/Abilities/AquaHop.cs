@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+// Teleports the Player to the Most Nearby Water Source.
 public class AquaHop : PlayerAbilities
 {
 

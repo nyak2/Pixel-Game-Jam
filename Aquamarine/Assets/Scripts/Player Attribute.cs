@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -12,10 +13,12 @@ public class PlayerAttribute : MonoBehaviour
     [SerializeField] public PlayerAbilities currentAbility { get; set; }
     private static bool isAbilityBeingUsed = false;
     private int i = 0;
+    [SerializeField] float spawnOffSet = 1.32f;
 
     [SerializeField] private Transform waterCheck;
     [SerializeField] private LayerMask waterLayer;
 
+    [SerializeField] private LayerMask waterPlatformLayer;
     [SerializeField] private GameObject waterPlatform;
     [SerializeField] private GameObject waterSource;
 
@@ -123,6 +126,7 @@ public class PlayerAttribute : MonoBehaviour
             Destroy(obj);
         }
         Player.instance.MakeUnProtected();
+        Thread.Sleep(100);
         ChangeAbilityUsageStatus(false);
     }
 
@@ -131,19 +135,26 @@ public class PlayerAttribute : MonoBehaviour
         return Physics2D.OverlapCircle(waterCheck.position, 0.2f, waterLayer);
     }
 
+    public bool IsOnWaterPlatform()
+    {
+        return Physics2D.OverlapCircle(waterCheck.position, 0.2f, waterPlatformLayer);
+    }
+
     public static void ChangeAbilityUsageStatus(bool b)
     {
         isAbilityBeingUsed = b;
     }
 
-    public void SpawnWaterSource()
+    public async void SpawnWaterSource()
     {
         ClearCurrentAbilityObject("Movable Water Source(Clone)");
         Vector2 spawnPos = ObtainSpawnPosition();
         
-        Instantiate(waterSource, new Vector3(spawnPos.x,spawnPos.y - 2f,0), Quaternion.identity);
+        GameObject tempWaterSource = Instantiate(waterSource, new Vector3(spawnPos.x,spawnPos.y - spawnOffSet,0), Quaternion.identity);
         ChangeAbilityUsageStatus(false);
-       
+        await Task.Delay(10000);
+        Destroy(tempWaterSource);
+
     }
 
     public async void SpawnWaterPlatform()
@@ -160,7 +171,7 @@ public class PlayerAttribute : MonoBehaviour
 
     private Vector2 ObtainSpawnPosition()
     {
-        return new Vector2(waterCheck.position.x, waterCheck.position.y + 2f);
+        return new Vector2(waterCheck.position.x, waterCheck.position.y + spawnOffSet);
     }
 
 }
