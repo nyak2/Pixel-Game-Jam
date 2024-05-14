@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
             mostNearByAnchor = instance.findNearbyAnchor();
             if (mostNearByAnchor != null)
             {
-                Vector2 anchorPosition = new Vector2(mostNearByAnchor.transform.position.x, mostNearByAnchor.transform.position.y);
+                Vector2 anchorPosition = new Vector2(mostNearByAnchor.transform.position.x, mostNearByAnchor.transform.position.y + 0.36f);
                 fakePlayer.transform.position = anchorPosition;
             }
         }
