@@ -55,7 +55,7 @@ public class PlayerAttribute : MonoBehaviour
 
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
-            if (currentAbility.GetType() == typeof(AquaHop))
+            if (i == abilities.Count - 1)
             {
                 i = 0;
             }
@@ -66,7 +66,7 @@ public class PlayerAttribute : MonoBehaviour
         }
         else if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
-            if (currentAbility.GetType() == typeof(WaterBed))
+            if (i == 0)
             {
                 i = abilities.Count - 1;
             }

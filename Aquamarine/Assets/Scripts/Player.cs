@@ -10,8 +10,8 @@ public class Player : MonoBehaviour
 {
     public static Player instance;
     private float horizontal;
-    private float speed = 3f;
-    public float jumpingPower = 10f;
+    [SerializeField] private float speed = 3f;
+    [SerializeField] private float jumpingPower = 10f;
     private bool isFacingRight = true;
     private static bool _isProtected = false;
 
