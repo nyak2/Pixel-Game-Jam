@@ -9,7 +9,7 @@ public class PlayerAttribute : MonoBehaviour
     public static PlayerAttribute instance;
     // WaterBed, AquaHop, HydroWard, PuddleBuddy
     private List<PlayerAbilities> abilities = new List<PlayerAbilities>();
-    public PlayerAbilities currentAbility { get; set; }
+    [SerializeField] public PlayerAbilities currentAbility { get; set; }
     private static bool isAbilityBeingUsed = false;
     private int i = 0;
 
@@ -101,12 +101,12 @@ public class PlayerAttribute : MonoBehaviour
 
     public bool IsCurrAbilityAquaHop()
     {
-        return currentAbility == abilities[3];
+        return currentAbility.GetType() == typeof(AquaHop);
     }
 
-    public bool IsCurrAbilityJetStream()
+    public bool IsCurrAbilityPuddleBuddy()
     {
-        return currentAbility == abilities[1];
+        return currentAbility.GetType() == typeof(PuddleBuddy);
     }
 
     public static void ClearCurrentAbilityObject(string abilityObject)

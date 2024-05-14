@@ -15,9 +15,4 @@ public class AquaHop : PlayerAbilities
         PlayerAttribute.ChangeAbilityUsageStatus(false);
     }
 
-    public override string ToString()
-    {
-        return "AquaHop";
-    }
-
 }

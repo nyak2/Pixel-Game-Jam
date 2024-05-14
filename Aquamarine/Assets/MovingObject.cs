@@ -17,7 +17,7 @@ public class MovingObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerAttribute.instance.IsCurrAbilityJetStream())
+        if (PlayerAttribute.instance.IsCurrAbilityPuddleBuddy())
         {
             if (Input.GetMouseButtonDown(0))
             {

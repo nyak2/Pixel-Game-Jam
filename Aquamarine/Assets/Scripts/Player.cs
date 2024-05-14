@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
     public static Player instance;
     private float horizontal;
     [SerializeField] private float speed = 3f;
-    [SerializeField] private float jumpingPower = 10f;
+    [SerializeField] private float jumpingPower = 9f;
+    [SerializeField] private float jumpingMultiplier = 1.25f;
     private bool isFacingRight = true;
     private static bool _isProtected = false;
 
@@ -43,9 +44,12 @@ public class Player : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && isGrounded())
+        if (Input.GetButtonDown("Jump") && (isGrounded() || PlayerAttribute.instance.IsOnWaterSource()))
         {
+            float tempJumpPower = jumpingPower;
+            if (PlayerAttribute.instance.IsOnWaterSource()) jumpingPower *= jumpingMultiplier;
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            jumpingPower = tempJumpPower;
         }
 
         Flip();
@@ -55,7 +59,7 @@ public class Player : MonoBehaviour
     {
         if (PlayerAttribute.instance.IsCurrAbilityAquaHop() && PlayerAttribute.instance.IsOnWaterSource())
         {
-            mostNearByAnchor = Player.instance.findNearbyAnchor();
+            mostNearByAnchor = instance.findNearbyAnchor();
             if (mostNearByAnchor != null)
             {
                 Vector2 anchorPosition = new Vector2(mostNearByAnchor.transform.position.x, mostNearByAnchor.transform.position.y);
