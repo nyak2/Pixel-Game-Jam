@@ -4,8 +4,5 @@ using UnityEngine;
 public class PlayerAbilities
 {
 
-    public virtual void UseAbility()
-    {
-
-    }
+    public virtual void UseAbility() { }
 }

@@ -7,29 +7,26 @@ using UnityEngine;
 public class PlayerAttribute : MonoBehaviour
 {
     public static PlayerAttribute instance;
-    // WaterBed, JetStream, HydroWard, AquaHop
+    // WaterBed, AquaHop, HydroWard, PuddleBuddy
     private List<PlayerAbilities> abilities = new List<PlayerAbilities>();
-    public PlayerAbilities currentAbility;
+    public PlayerAbilities currentAbility { get; set; }
     private static bool isAbilityBeingUsed = false;
     private int i = 0;
 
-    private static Transform tempWaterCheck;
     [SerializeField] private Transform waterCheck;
     [SerializeField] private LayerMask waterLayer;
 
-    private static GameObject waterPlatform;
-    [SerializeField] private GameObject waterPlat;
+    [SerializeField] private GameObject waterPlatform;
+    [SerializeField] private GameObject waterSource;
 
     private void Start()
     {
         instance = this;
         abilities.Add(new WaterBed());
-        abilities.Add(new JetStream());
-        abilities.Add(new HydroWard());
         abilities.Add(new AquaHop());
+        abilities.Add(new HydroWard());
+        abilities.Add(new PuddleBuddy());
         currentAbility = abilities[0];
-        waterPlatform = waterPlat;
-        tempWaterCheck = waterCheck;
     }
 
     // Update is called once per frame
@@ -50,7 +47,7 @@ public class PlayerAttribute : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Clearing Abilities");
+                    // Clears All Abilities if Use Ability is Pressed While An Ability is Being Used.
                     ClearAllAbilities();
                 }
             }
@@ -107,10 +104,26 @@ public class PlayerAttribute : MonoBehaviour
         return currentAbility == abilities[3];
     }
 
-    public static void ClearAllAbilities()
+    public bool IsCurrAbilityJetStream()
     {
-        // Clears all abilities on the map when the player dies or press interact again
-        isAbilityBeingUsed = false;
+        return currentAbility == abilities[1];
+    }
+
+    public static void ClearCurrentAbilityObject(string abilityObject)
+    {
+        GameObject presentWaterBlock = GameObject.Find(abilityObject);
+        if (presentWaterBlock != null) Destroy(presentWaterBlock);
+    }
+
+    public void ClearAllAbilities()
+    {
+        GameObject[] ablityObjects = GameObject.FindGameObjectsWithTag("Ability Object");
+        foreach (GameObject obj in ablityObjects)
+        {
+            Destroy(obj);
+        }
+        Player.instance.MakeUnProtected();
+        ChangeAbilityUsageStatus(false);
     }
 
     public bool IsOnWaterSource()
@@ -123,20 +136,31 @@ public class PlayerAttribute : MonoBehaviour
         isAbilityBeingUsed = b;
     }
 
-    public async static void SpawnWaterPlatform()
+    public void SpawnWaterSource()
     {
+        ClearCurrentAbilityObject("Movable Water Source(Clone)");
         Vector2 spawnPos = ObtainSpawnPosition();
-
-        GameObject tempPlatform = Instantiate(waterPlatform, new Vector3(spawnPos.x,spawnPos.y,0), Quaternion.identity);
-        await Task.Delay(3000);
-        Destroy(tempPlatform);
+        
+        Instantiate(waterSource, new Vector3(spawnPos.x,spawnPos.y - 2f,0), Quaternion.identity);
         ChangeAbilityUsageStatus(false);
        
     }
 
-    private static Vector2 ObtainSpawnPosition()
+    public async void SpawnWaterPlatform()
     {
-        return new Vector2(tempWaterCheck.position.x, tempWaterCheck.position.y + 2f);
+        ClearCurrentAbilityObject("Water Platform(Clone)");
+        Vector2 spawnPos = ObtainSpawnPosition();
+
+        GameObject tempPlatform = Instantiate(waterPlatform, new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
+        await Task.Delay(3000);
+        Destroy(tempPlatform);
+        ChangeAbilityUsageStatus(false);
+        
+    }
+
+    private Vector2 ObtainSpawnPosition()
+    {
+        return new Vector2(waterCheck.position.x, waterCheck.position.y + 2f);
     }
 
 }

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Teleport Anchor
+  - Water Source
+  - Ability Object
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - UI
   - Ground
   - Water Source
-  - 
+  - Movable
   - 
   - 
   - 
@@ -44,6 +46,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2095625121
+    locked: 0
+  - name: Backdrop
+    uniqueID: 510051163
     locked: 0
   - name: Platform
     uniqueID: 4054453627

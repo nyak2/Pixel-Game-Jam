@@ -8,7 +8,6 @@ public class HydroWard : PlayerAbilities
 
     public override void UseAbility()
     {
-        Debug.Log("Shield Going Out");
         PlayerAttribute.ChangeAbilityUsageStatus(true);
         _ = SpawnShield();
     }
@@ -17,14 +16,9 @@ public class HydroWard : PlayerAbilities
     {
         Player player = Player.instance;
         player.MakeProtected();
-        await player.SlowMovementFor(3000);
+        await player.SlowMovementFor(2000);
         player.MakeUnProtected();
         PlayerAttribute.ChangeAbilityUsageStatus(false);
-    }
-
-    public override string ToString()
-    {
-        return "Hydro Ward";
     }
 
 }

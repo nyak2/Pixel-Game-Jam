@@ -12,6 +12,7 @@ public class ProtectedDeath : MonoBehaviour
             player.Die();
         }
     }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         var player = collision.GetComponent<Player>();

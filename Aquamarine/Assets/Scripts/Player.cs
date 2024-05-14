@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
         if (!_active) return;
 
         horizontal = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
@@ -52,9 +53,6 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!_active) return;
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-
         if (PlayerAttribute.instance.IsCurrAbilityAquaHop() && PlayerAttribute.instance.IsOnWaterSource())
         {
             mostNearByAnchor = Player.instance.findNearbyAnchor();
@@ -63,11 +61,11 @@ public class Player : MonoBehaviour
                 Vector2 anchorPosition = new Vector2(mostNearByAnchor.transform.position.x, mostNearByAnchor.transform.position.y);
                 fakePlayer.transform.position = anchorPosition;
             }
-        } else
+        }
+        else
         {
             instance.ResetFakePlayer();
         }
-
     }
 
     public bool isGrounded()
@@ -120,12 +118,20 @@ public class Player : MonoBehaviour
 
     public void MakeProtected()
     {
+        // TODO: Instantiate a shield object here
         _isProtected = true;
     }
 
     public void MakeUnProtected()
     {
-        _isProtected = false;
+        // TODO: Remove the shield object here
+        if (_isProtected)
+        {
+            _isProtected = false;
+            jumpingPower *= 2f;
+            speed *= 2f;
+        }
+      
     }
 
     public bool isProtected()
@@ -137,8 +143,6 @@ public class Player : MonoBehaviour
     {
         SlowPlayerMovement();
         await Task.Delay(duration);
-        jumpingPower *= 2f;
-        speed *= 2f;
     }
 
     private void SlowPlayerMovement()
