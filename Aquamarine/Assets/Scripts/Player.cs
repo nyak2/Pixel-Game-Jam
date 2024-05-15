@@ -129,7 +129,7 @@ public class Player : MonoBehaviour
     {
         playeranim.Play("idle", 0, 0);
         isJumping = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         transform.position = respawnPosition;  
         _active = true;
         _collider.enabled = true;
