@@ -28,6 +28,11 @@ public class Player : MonoBehaviour
     private Vector2 fakePlayerPos = new Vector2(-10f, -10f);
     public static GameObject mostNearByAnchor;
 
+    [SerializeField] private Animator playeranim;
+    private bool isJumping;
+    [SerializeField] private float jumpradius;
+    private float tempJumpPower;
+
     private void Start()
     {
         instance = this;
@@ -44,16 +49,21 @@ public class Player : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
+        if(playeranim.GetCurrentAnimatorStateInfo(0).IsName("idle") && rb.velocity.x != 0 && !isJumping)
+        {
+            playeranim.Play("start run", 0, 0);
+        }
+        else if((playeranim.GetCurrentAnimatorStateInfo(0).IsName("run") || playeranim.GetCurrentAnimatorStateInfo(0).IsName("start run") )&& rb.velocity.x == 0 && !isJumping)
+        {
+            playeranim.Play("idle", 0, 0);
+        }
+
         if (Input.GetButtonDown("Jump") && (isGrounded() || 
             PlayerAttribute.instance.IsOnWaterSource() || 
             PlayerAttribute.instance.IsOnWaterPlatform()))
         {
-            float tempJumpPower = jumpingPower;
-            if (PlayerAttribute.instance.IsOnWaterSource() || PlayerAttribute.instance.IsOnWaterPlatform())
-                jumpingPower *= jumpingMultiplier;
-
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            jumpingPower = tempJumpPower;
+            isJumping = true;
+            playeranim.Play("start jump", 0, 0);
         }
 
         Flip();
@@ -78,7 +88,7 @@ public class Player : MonoBehaviour
 
     public bool isGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, jumpradius, groundLayer);
     }
 
     private void Flip()
@@ -117,6 +127,8 @@ public class Player : MonoBehaviour
 
     private IEnumerator Respawn()
     {
+        playeranim.Play("idle", 0, 0);
+        isJumping = false;
         yield return new WaitForSeconds(1f);
         transform.position = respawnPosition;  
         _active = true;
@@ -194,5 +206,37 @@ public class Player : MonoBehaviour
         }
         return null;
     }
-    
+
+    public void CheckForFalling()
+    {
+        if(rb.velocity.y <= 0 && (isGrounded() || PlayerAttribute.instance.IsOnWaterPlatform() || PlayerAttribute.instance.IsOnWaterSource()))
+        {
+            playeranim.Play("jump end");
+
+        }
+    }
+
+    public void SetNotJumping()
+    {
+        isJumping = false;
+        
+    }
+
+    public void CheckJumpPower()
+    {
+        tempJumpPower = jumpingPower;
+        if (PlayerAttribute.instance.IsOnWaterSource() || PlayerAttribute.instance.IsOnWaterPlatform())
+            jumpingPower *= jumpingMultiplier;
+
+    }
+    public void ApplyJump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        jumpingPower = tempJumpPower;
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(groundCheck.position, jumpradius);
+    }
 }

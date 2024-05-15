@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5db6f6da36c4d3649824533d5e967745
+guid: 081acee1cea53bd46b347325fd2afe67
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Aqua idle_0
+      name: Aqua Run 2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ede0315a916c21b4bb13d82fc423d1ea
-      internalID: -1071162492
+      spriteID: bacda8d7d511e044987253e10d5b829f
+      internalID: -236152009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aqua idle_1
+      name: Aqua Run 2_1
       rect:
         serializedVersion: 2
         x: 48
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0728028c0e3aefb4abfe6d537810fa37
-      internalID: 978549541
+      spriteID: 9677838f8b4166e418c5e2fd14c3d9ca
+      internalID: -421740375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aqua idle_2
+      name: Aqua Run 2_2
       rect:
         serializedVersion: 2
         x: 96
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: daa79eccd3409e14a8d44f7e955ee2ec
-      internalID: -1808885809
+      spriteID: 69e55e86e47b56b4c94cbe88000332db
+      internalID: -107722340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aqua idle_3
+      name: Aqua Run 2_3
       rect:
         serializedVersion: 2
         x: 144
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14998f338a37c6c41ad33e540a57be34
-      internalID: 448561824
+      spriteID: caf879c6d3b192d4a94d11797af0ab40
+      internalID: -189744244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aqua idle_4
+      name: Aqua Run 2_4
       rect:
         serializedVersion: 2
         x: 192
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a51ba67c10370b441ba5e800d156ee9a
-      internalID: -954637933
+      spriteID: f3408a9d64795ce4b9cf818592eb56d2
+      internalID: 1922549579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aqua idle_5
+      name: Aqua Run 2_5
       rect:
         serializedVersion: 2
         x: 240
@@ -255,8 +255,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1174757d3a16f040ab9fe0a2e145a93
-      internalID: 343758257
+      spriteID: 8b7133c3ddf4f154c893f49bcb38efef
+      internalID: -1164865963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aqua Run 2_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e2ebd3cf964ff42846ad5b73887210
+      internalID: -1078010438
       vertices: []
       indices: 
       edges: []
@@ -272,12 +293,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Aqua idle_0: -1071162492
-      Aqua idle_1: 978549541
-      Aqua idle_2: -1808885809
-      Aqua idle_3: 448561824
-      Aqua idle_4: -954637933
-      Aqua idle_5: 343758257
+      Aqua Run 2_0: -236152009
+      Aqua Run 2_1: -421740375
+      Aqua Run 2_2: -107722340
+      Aqua Run 2_3: -189744244
+      Aqua Run 2_4: 1922549579
+      Aqua Run 2_5: -1164865963
+      Aqua Run 2_6: -1078010438
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
