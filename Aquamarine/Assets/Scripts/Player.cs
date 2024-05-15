@@ -234,6 +234,7 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         jumpingPower = tempJumpPower;
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
