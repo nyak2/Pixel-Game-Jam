@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6acf01086fcac17489b523e997071cda
+guid: bd491f7b2a002034c9186ab993d5fd1b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Aqua Jump 1_0
+      name: Aqua Jump_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7868c6bbf858c346825f17a4dce34d3
-      internalID: 1444527262
+      spriteID: 453ced0ce34af5248ae5dc6270a94ba8
+      internalID: 1428790485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aqua Jump 1_1
+      name: Aqua Jump_1
       rect:
         serializedVersion: 2
         x: 48
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30c4beab24693f34e96b6ce9c6880c9a
-      internalID: 32447327
+      spriteID: 138fc9519cd4d0347bfdabb317f73391
+      internalID: 956054790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aqua Jump 1_2
+      name: Aqua Jump_2
       rect:
         serializedVersion: 2
         x: 96
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 738872f32537ca746bcebabe7b794cf6
-      internalID: 203978208
+      spriteID: 8a3a5dd306e67e748be88483bac4b8b6
+      internalID: 2071131931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aqua Jump 1_3
+      name: Aqua Jump_3
       rect:
         serializedVersion: 2
         x: 144
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03b77388fabfab74c9fc0ef931668388
-      internalID: 1404539024
+      spriteID: efdcb07bee635844ea64abe85a9c9eb2
+      internalID: -1423472469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aqua Jump 1_4
+      name: Aqua Jump_4
       rect:
         serializedVersion: 2
         x: 192
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83d9e231ca933bc4b87b2b75d5915909
-      internalID: 1241473918
+      spriteID: 80d9ecce86025cc47a209ac71d31d59c
+      internalID: 1897273898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aqua Jump 1_5
+      name: Aqua Jump_5
       rect:
         serializedVersion: 2
         x: 240
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71ad6cd2bd2578641a89cf94ceaa1b47
-      internalID: 224321713
+      spriteID: f03f9bd67f4861a449a65e646cd4d5b6
+      internalID: 1478937142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aqua Jump 1_6
+      name: Aqua Jump_6
       rect:
         serializedVersion: 2
         x: 288
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b8ba64cea4d69f42a5f8ba02b042488
-      internalID: -2109052770
+      spriteID: 2e545ef4f1b85ae42bdf08a43fdebf47
+      internalID: -1695843452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aqua Jump 1_7
+      name: Aqua Jump_7
       rect:
         serializedVersion: 2
         x: 336
@@ -297,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39ee2212544ddcb4bb4fb367ba365a00
-      internalID: -1813592874
+      spriteID: b402cd4816825fa4394427d88379b40b
+      internalID: -750695495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aqua Jump 1_8
+      name: Aqua Jump_8
       rect:
         serializedVersion: 2
         x: 384
@@ -318,8 +318,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97a1422dddc32c14a984d69c17294df9
-      internalID: 337817323
+      spriteID: 2cd1e980996e79c48ad30a9bb693012b
+      internalID: 1046112488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aqua Jump_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41b00b27c235ea4fbd14273cfdfbde0
+      internalID: -513431785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aqua Jump_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57052053237307644b63236773d6faca
+      internalID: 517191296
       vertices: []
       indices: 
       edges: []
@@ -335,15 +377,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Aqua Jump 1_0: 1444527262
-      Aqua Jump 1_1: 32447327
-      Aqua Jump 1_2: 203978208
-      Aqua Jump 1_3: 1404539024
-      Aqua Jump 1_4: 1241473918
-      Aqua Jump 1_5: 224321713
-      Aqua Jump 1_6: -2109052770
-      Aqua Jump 1_7: -1813592874
-      Aqua Jump 1_8: 337817323
+      Aqua Jump_0: 1428790485
+      Aqua Jump_1: 956054790
+      Aqua Jump_10: 517191296
+      Aqua Jump_2: 2071131931
+      Aqua Jump_3: -1423472469
+      Aqua Jump_4: 1897273898
+      Aqua Jump_5: 1478937142
+      Aqua Jump_6: -1695843452
+      Aqua Jump_7: -750695495
+      Aqua Jump_8: 1046112488
+      Aqua Jump_9: -513431785
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
