@@ -21,6 +21,7 @@ public class PlayerAttribute : MonoBehaviour
     [SerializeField] private LayerMask waterPlatformLayer;
     [SerializeField] private GameObject waterPlatform;
     [SerializeField] private GameObject waterSource;
+    [SerializeField] private Animator playeranim;
 
     private void Start()
     {
@@ -40,19 +41,11 @@ public class PlayerAttribute : MonoBehaviour
 
     public void UpdateAbility()
     {
-        if (IsOnWaterSource())
+        if (IsOnWaterSource() && !playeranim.GetCurrentAnimatorStateInfo(0).IsName("ability"))
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (!isAbilityBeingUsed)
-                {
-                    currentAbility.UseAbility();
-                }
-                else
-                {
-                    // Clears All Abilities if Use Ability is Pressed While An Ability is Being Used.
-                    ClearAllAbilities();
-                }
+                playeranim.Play("ability", 0, 0);
             }
         }
 
@@ -173,5 +166,19 @@ public class PlayerAttribute : MonoBehaviour
     {
         return new Vector2(waterCheck.position.x, waterCheck.position.y + spawnOffSet);
     }
+
+    public void EnableAbility()
+    {
+        if (!isAbilityBeingUsed)
+        {
+            currentAbility.UseAbility();
+        }
+        else
+        {
+            // Clears All Abilities if Use Ability is Pressed While An Ability is Being Used.
+            ClearAllAbilities();
+        }
+    }
+
 
 }

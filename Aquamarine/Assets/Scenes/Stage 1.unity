@@ -370,6 +370,7 @@ MonoBehaviour:
     m_Bits: 512
   waterPlatform: {fileID: 3323187207274151241, guid: 86bc90d516a50c646a3ed75a6c8a325d, type: 3}
   waterSource: {fileID: 106635130019592729, guid: be025dbb9cb638e43aaf5c7e2ed58a6d, type: 3}
+  playeranim: {fileID: 249390471}
 --- !u!95 &249390471
 Animator:
   serializedVersion: 5

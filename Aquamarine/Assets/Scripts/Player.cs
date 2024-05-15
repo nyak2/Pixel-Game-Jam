@@ -46,8 +46,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!_active) return;
-
+        if (!_active || playeranim.GetCurrentAnimatorStateInfo(0).IsName("ability"))
+        {
+            isJumping = false;
+            rb.velocity = new Vector3(0,rb.velocity.y,0);
+            return;
+        }
         horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
