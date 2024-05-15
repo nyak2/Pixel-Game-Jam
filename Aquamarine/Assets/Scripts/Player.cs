@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Animator playeranim;
     private bool isJumping;
+    private bool canJump = true;
     [SerializeField] private float jumpradius;
     private float tempJumpPower;
 
@@ -39,6 +40,7 @@ public class Player : MonoBehaviour
         _collider = GetComponent<Collider2D>();
         SetRespawnPoint(transform.position);
         fakePlayer.transform.position = fakePlayerPos;
+        tempJumpPower = jumpingPower;
     }
 
     // Update is called once per frame
@@ -58,7 +60,7 @@ public class Player : MonoBehaviour
             playeranim.Play("idle", 0, 0);
         }
 
-        if (Input.GetButtonDown("Jump") && (isGrounded() || 
+        if (Input.GetButtonDown("Jump") && !isJumping && (isGrounded() || 
             PlayerAttribute.instance.IsOnWaterSource() || 
             PlayerAttribute.instance.IsOnWaterPlatform()))
         {
@@ -219,16 +221,15 @@ public class Player : MonoBehaviour
     public void SetNotJumping()
     {
         isJumping = false;
-        
+        canJump = true;
     }
 
     public void CheckJumpPower()
     {
-        tempJumpPower = jumpingPower;
         if (PlayerAttribute.instance.IsOnWaterSource() || PlayerAttribute.instance.IsOnWaterPlatform())
             jumpingPower *= jumpingMultiplier;
-
     }
+
     public void ApplyJump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
