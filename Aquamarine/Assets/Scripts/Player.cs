@@ -30,7 +30,6 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Animator playeranim;
     private bool isJumping;
-    private bool canJump = true;
     [SerializeField] private float jumpradius;
     private float tempJumpPower;
 
@@ -46,16 +45,18 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (!_active || playeranim.GetCurrentAnimatorStateInfo(0).IsName("ability"))
         {
             isJumping = false;
             rb.velocity = new Vector3(0,rb.velocity.y,0);
             return;
         }
+
         horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
-        if(playeranim.GetCurrentAnimatorStateInfo(0).IsName("idle") && rb.velocity.x != 0 && !isJumping)
+        if (playeranim.GetCurrentAnimatorStateInfo(0).IsName("idle") && rb.velocity.x != 0 && !isJumping)
         {
             playeranim.Play("start run", 0, 0);
         }
@@ -225,7 +226,6 @@ public class Player : MonoBehaviour
     public void SetNotJumping()
     {
         isJumping = false;
-        canJump = true;
     }
 
     public void CheckJumpPower()
