@@ -19,6 +19,11 @@ public class WaterBedStatue : MonoBehaviour
         }
 
         touched = true;
+        if (!PlayerPrefs.HasKey("WaterBed"))
+        {
+            PlayerPrefs.SetString("WaterBed", "true");
+            PlayerPrefs.Save();
+        }
         AddWaterBedToPlayerAbilities();
     }
 

@@ -19,6 +19,11 @@ public class HydroWardStatue : MonoBehaviour
         }
 
         touched = true;
+        if (!PlayerPrefs.HasKey("HydroWard"))
+        {
+            PlayerPrefs.SetString("HydroWard", "true");
+            PlayerPrefs.Save();
+        }
         AddHydroWardToPlayerAbilities();
     }
 

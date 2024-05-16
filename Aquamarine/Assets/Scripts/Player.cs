@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
         instance = this;
         _collider = GetComponent<Collider2D>();
         SetRespawnPoint(transform.position);
+        
         if(fakePlayer != null)
         {
             fakePlayer.transform.position = fakePlayerPos;

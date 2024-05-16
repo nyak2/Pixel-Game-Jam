@@ -19,6 +19,11 @@ public class AquaHopStatue : MonoBehaviour
         }
 
         touched = true;
+        if (!PlayerPrefs.HasKey("AquaHop"))
+        {
+            PlayerPrefs.SetString("AquaHop", "true");
+            PlayerPrefs.Save();
+        }
         AddAquaHopToPlayerAbilities();
     }
 

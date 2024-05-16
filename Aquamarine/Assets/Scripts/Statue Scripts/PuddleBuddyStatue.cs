@@ -19,6 +19,11 @@ public class PuddleBuddyStatue : MonoBehaviour
         }
 
         touched = true;
+        if (!PlayerPrefs.HasKey("PuddleBuddy"))
+        {
+            PlayerPrefs.SetString("PuddleBuddy", "true");
+            PlayerPrefs.Save();
+        }
         AddPuddleBuddyToPlayerAbilities();
     }
 

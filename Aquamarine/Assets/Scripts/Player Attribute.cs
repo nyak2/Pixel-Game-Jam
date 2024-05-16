@@ -32,7 +32,10 @@ public class PlayerAttribute : MonoBehaviour
     {
         instance = this;
         abilityIcon.color = new Color(1f, 1f, 1f, 0f);
-       
+        if (PlayerPrefs.HasKey("WaterBed")) AddWaterBedToAbilityList();
+        if (PlayerPrefs.HasKey("AquaHop")) AddAquaHopToAbilityList();
+        if (PlayerPrefs.HasKey("HydroWard")) AddHydroWardToAbilityList();
+        if (PlayerPrefs.HasKey("PuddleBuddy")) AddPuddleBuddyToAbilityList();
     }
 
     // Update is called once per frame
@@ -137,11 +140,13 @@ public class PlayerAttribute : MonoBehaviour
 
     public bool IsCurrAbilityAquaHop()
     {
+        if (currentAbility == null) return false;
         return currentAbility.GetType() == typeof(AquaHop);
     }
 
     public bool IsCurrAbilityPuddleBuddy()
     {
+        if (currentAbility == null) return false;
         return currentAbility.GetType() == typeof(PuddleBuddy);
     }
 
