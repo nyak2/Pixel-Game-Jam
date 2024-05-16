@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
-    [SerializeField] private bool _active = true;
+    [SerializeField] public bool _active = true;
     private Collider2D _collider;
 
     private Vector2 respawnPosition;

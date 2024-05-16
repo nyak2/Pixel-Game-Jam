@@ -31,11 +31,8 @@ public class PlayerAttribute : MonoBehaviour
     private void Start()
     {
         instance = this;
-        abilities.Add(new WaterBed());
-        abilities.Add(new AquaHop());
-        abilities.Add(new HydroWard());
-        abilities.Add(new PuddleBuddy());
-        currentAbility = abilities[0];
+        abilityIcon.color = new Color(1f, 1f, 1f, 0f);
+       
     }
 
     // Update is called once per frame
@@ -50,6 +47,7 @@ public class PlayerAttribute : MonoBehaviour
         {
             return;
         }
+
         if (IsOnWaterSource())
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -58,51 +56,83 @@ public class PlayerAttribute : MonoBehaviour
             }
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        if (abilities.Count > 0)
         {
-            if (i == abilities.Count - 1)
+            abilityIcon.color = new Color(1f, 1f, 1f, 1f);
+
+            if (Input.GetAxis("Mouse ScrollWheel") < 0)
             {
-                i = 0;
-            }
-            else
-            {
-                i += 1;
-            }
-        }
-        else if (Input.GetAxis("Mouse ScrollWheel") > 0)
-        {
-            if (i == 0)
-            {
-                i = abilities.Count - 1;
-            }
-            else
-            {
-                i -= 1;
-            }
-        }
-        else
-        {
-            switch (Input.inputString)
-            {
-                case "1":
+                if (i == abilities.Count - 1)
+                {
                     i = 0;
-                    break;
-
-                case "2":
-                    i = 1;
-                    break;
-
-                case "3":
-                    i = 2;
-                    break;
-
-                case "4":
-                    i = 3;
-                    break;
+                }
+                else
+                {
+                    i += 1;
+                }
             }
+            else if (Input.GetAxis("Mouse ScrollWheel") > 0)
+            {
+                if (i == 0)
+                {
+                    i = abilities.Count - 1;
+                }
+                else
+                {
+                    i -= 1;
+                }
+            }
+            else
+            {
+                switch (Input.inputString)
+                {
+                    case "1":
+                        if (abilities.Count >= 1)
+                            i = 0;
+                        break;
+
+                    case "2":
+                        if (abilities.Count >=2)
+                            i = 1;
+                        break;
+
+                    case "3":
+                        if (abilities.Count >= 3)
+                            i = 2;
+                        break;
+
+                    case "4":
+                        if (abilities.Count >= 4)
+                            i = 3;
+                        break;
+                }
+            }
+            currentAbility = abilities[i];
+            abilityIcon.sprite = abilitesSprites[i];
         }
-        currentAbility = abilities[i];
-        abilityIcon.sprite = abilitesSprites[i];
+    }
+
+    public void AddPuddleBuddyToAbilityList()
+    {
+        abilities.Add(new PuddleBuddy());
+    }
+
+    public void AddHydroWardToAbilityList()
+    {
+        abilities.Add(new HydroWard());
+    }
+
+    public void AddWaterBedToAbilityList()
+    {
+        abilities.Add(new WaterBed());
+
+        // Must Move If WaterBed is No Longer the First Ability.
+        currentAbility = abilities[0];
+    }
+
+    public void AddAquaHopToAbilityList()
+    {
+        abilities.Add(new AquaHop());
     }
 
     public bool IsCurrAbilityAquaHop()
