@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerAttribute : MonoBehaviour
 {
@@ -21,7 +23,10 @@ public class PlayerAttribute : MonoBehaviour
     [SerializeField] private LayerMask waterPlatformLayer;
     [SerializeField] private GameObject waterPlatform;
     [SerializeField] private GameObject waterSource;
+
     [SerializeField] private Animator playeranim;
+    [SerializeField] private List<Sprite> abilitesSprites;
+    [SerializeField] private Image abilityIcon;
 
     private void Start()
     {
@@ -41,7 +46,11 @@ public class PlayerAttribute : MonoBehaviour
 
     public void UpdateAbility()
     {
-        if (IsOnWaterSource() && !playeranim.GetCurrentAnimatorStateInfo(0).IsName("ability"))
+        if(playeranim.GetCurrentAnimatorStateInfo(0).IsName("ability"))
+        {
+            return;
+        }
+        if (IsOnWaterSource())
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -93,6 +102,7 @@ public class PlayerAttribute : MonoBehaviour
             }
         }
         currentAbility = abilities[i];
+        abilityIcon.sprite = abilitesSprites[i];
     }
 
     public bool IsCurrAbilityAquaHop()

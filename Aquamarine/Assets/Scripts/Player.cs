@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpradius;
     private float tempJumpPower;
 
+    [SerializeField] private GameObject shieldObject;
+    private GameObject tempObject;
     private void Start()
     {
         instance = this;
@@ -153,12 +155,14 @@ public class Player : MonoBehaviour
 
     public void MakeProtected()
     {
+        tempObject = Instantiate(shieldObject, transform);
         // TODO: Instantiate a shield object here
         _isProtected = true;
     }
 
     public void MakeUnProtected()
     {
+        Destroy(tempObject);
         // TODO: Remove the shield object here
         if (_isProtected)
         {
@@ -242,6 +246,7 @@ public class Player : MonoBehaviour
 
     public void CheckJumpPower()
     {
+        tempJumpPower= jumpingPower;
         if (PlayerAttribute.instance.IsOnWaterSource() || PlayerAttribute.instance.IsOnWaterPlatform())
             jumpingPower *= jumpingMultiplier;
     }
@@ -250,6 +255,7 @@ public class Player : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         jumpingPower = tempJumpPower;
+
     }
 
     private void OnDrawGizmos()
