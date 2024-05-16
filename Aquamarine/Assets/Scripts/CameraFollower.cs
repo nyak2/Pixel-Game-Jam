@@ -11,7 +11,6 @@ public class CameraFollower : MonoBehaviour
     void LateUpdate()
     {
         transform.position = player.transform.position;
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, maxLeftSide, maxRightSide), 
-            Mathf.Clamp(transform.position.y, maxBottomSide, maxTopSide), -10);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, maxLeftSide, maxRightSide), Mathf.Clamp(transform.position.y, maxBottomSide, maxTopSide), -10);
     }
 }
