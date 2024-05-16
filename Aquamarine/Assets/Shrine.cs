@@ -9,6 +9,7 @@ public class Shrine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (!saved)
         {
             var player = collision.GetComponent<Player>();
