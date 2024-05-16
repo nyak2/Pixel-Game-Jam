@@ -90,6 +90,7 @@ public class Player : MonoBehaviour
             mostNearByAnchor = instance.findNearbyAnchor();
             if (mostNearByAnchor != null)
             {
+                Debug.Log("Can Teleport");
                 Vector2 anchorPosition = new Vector2(mostNearByAnchor.transform.position.x, mostNearByAnchor.transform.position.y + 0.36f);
                 fakePlayer.transform.position = anchorPosition;
             }
@@ -192,6 +193,10 @@ public class Player : MonoBehaviour
             instance.transform.position = mostNearByAnchor.transform.position;
             instance.ResetFakePlayer();
         }
+        else
+        {
+            Debug.Log("Cannot Teleport!");
+        }
         
     }
 
@@ -206,7 +211,7 @@ public class Player : MonoBehaviour
         if (anchors.Length > 0)
         {
             float currMinDist = float.MaxValue;
-            GameObject mostNearbyAnchor = anchors[0];
+            GameObject mostNearbyAnchor = null;
             foreach (var anchor in anchors)
             {
                 float anchorDist = Vector2.Distance(this.transform.position, anchor.transform.position);

@@ -1,10 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TeleportationStopper : MonoBehaviour
 {
-    public bool canTeleportTo = true;
+    public bool canTeleportTo = false;
+
+
+    private void OnBecameInvisible()
+    {
+        this.canTeleportTo = false;
+    }
+
+    private void OnBecameVisible()
+    {
+        this.canTeleportTo = true;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
