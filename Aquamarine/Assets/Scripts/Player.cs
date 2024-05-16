@@ -38,7 +38,10 @@ public class Player : MonoBehaviour
         instance = this;
         _collider = GetComponent<Collider2D>();
         SetRespawnPoint(transform.position);
-        fakePlayer.transform.position = fakePlayerPos;
+        if(fakePlayer != null)
+        {
+            fakePlayer.transform.position = fakePlayerPos;
+        }
         tempJumpPower = jumpingPower;
     }
 
@@ -78,6 +81,10 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(fakePlayer == null)
+        { 
+            return;
+        }
         if (PlayerAttribute.instance.IsCurrAbilityAquaHop() && PlayerAttribute.instance.IsOnWaterSource())
         {
             mostNearByAnchor = instance.findNearbyAnchor();

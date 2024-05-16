@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5527314832653173668}
   - component: {fileID: 7621877158343571349}
   - component: {fileID: -8799210372192847783}
+  - component: {fileID: 782687959524030608}
   m_Layer: 9
   m_Name: Water Platform
   m_TagString: Ability Object
@@ -27,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3323187207274151241}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0026614703, y: 0.010532871, z: -0.000028034576, w: 0.999941}
-  m_LocalPosition: {x: -5.249, y: -4.004, z: 0.001}
-  m_LocalScale: {x: 1.18, y: 1.2716333, z: 1.2716333}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0.305, y: 1.207, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5527314832653173668
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -73,14 +74,14 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1813000177
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 923472448, guid: ce26e4217b3230c4389678f25687749d, type: 3}
+  m_Sprite: {fileID: -1907756704, guid: 8b240f3c5ac24974581436ba5c9bd54c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -118,18 +119,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0028955936, y: 0.46133327}
+  m_Offset: {x: 0.0028955936, y: 0.8832806}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0291376, y: 0.10522249}
+  m_Size: {x: 1.0291376, y: 0.25426137}
   m_EdgeRadius: 0
 --- !u!251 &-8799210372192847783
 PlatformEffector2D:
@@ -150,3 +151,24 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!95 &782687959524030608
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3323187207274151241}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf0e489cb89035143ad6cd8ffe8896a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
