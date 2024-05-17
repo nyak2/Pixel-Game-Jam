@@ -973,7 +973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1869195815887043551, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5168317522833811555, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
       propertyPath: m_Pivot.x
@@ -28010,6 +28010,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7699146611380941484, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 249390467}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28063,6 +28067,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 578925206428021781, guid: b2dd4d07472b41d479bad0607464a101, type: 3}
+      propertyPath: savetext
+      value: 
+      objectReference: {fileID: 740485858}
     - target: {fileID: 8123735650827392942, guid: b2dd4d07472b41d479bad0607464a101, type: 3}
       propertyPath: m_Name
       value: StatueCheckPoint
@@ -28082,11 +28090,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 721451118495544226, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.82
+      value: -7.48
       objectReference: {fileID: 0}
     - target: {fileID: 721451118495544226, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.94
+      value: -3.09
       objectReference: {fileID: 0}
     - target: {fileID: 721451118495544226, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: m_LocalPosition.z

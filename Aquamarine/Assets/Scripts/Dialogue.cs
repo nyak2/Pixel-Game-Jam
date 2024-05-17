@@ -116,10 +116,6 @@ public class Dialogue : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            StartDialogue();
-        }
 
         if (!started)
             return;
@@ -127,6 +123,7 @@ public class Dialogue : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && isWritting)
         {
+            // Insert SFX for continuing dialogue
             StopCoroutine(Writing());
             dialogueText.text = dialogues[index].ToString();
             isWritting = false;

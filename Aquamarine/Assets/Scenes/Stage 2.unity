@@ -359,11 +359,11 @@ PrefabInstance:
       objectReference: {fileID: 349318646}
     - target: {fileID: 7003511260169724828, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.512
+      value: 17.48
       objectReference: {fileID: 0}
     - target: {fileID: 7003511260169724828, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.511
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7003511260169724828, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12359,6 +12359,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 578925206428021781, guid: b2dd4d07472b41d479bad0607464a101, type: 3}
+      propertyPath: savetext
+      value: 
+      objectReference: {fileID: 1177779840}
     - target: {fileID: 8123735650827392942, guid: b2dd4d07472b41d479bad0607464a101, type: 3}
       propertyPath: m_Name
       value: StatueCheckPoint (1)
@@ -14979,6 +14983,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 578925206428021781, guid: b2dd4d07472b41d479bad0607464a101, type: 3}
+      propertyPath: savetext
+      value: 
+      objectReference: {fileID: 1177779840}
     - target: {fileID: 8123735650827392942, guid: b2dd4d07472b41d479bad0607464a101, type: 3}
       propertyPath: m_Name
       value: StatueCheckPoint (2)
@@ -14988,6 +14996,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2dd4d07472b41d479bad0607464a101, type: 3}
+--- !u!1 &1177779840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6528230121242896406, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+  m_PrefabInstance: {fileID: 349318643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1189504138
 GameObject:
   m_ObjectHideFlags: 0
@@ -27772,6 +27785,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 578925206428021781, guid: b2dd4d07472b41d479bad0607464a101, type: 3}
+      propertyPath: savetext
+      value: 
+      objectReference: {fileID: 1177779840}
     - target: {fileID: 8123735650827392942, guid: b2dd4d07472b41d479bad0607464a101, type: 3}
       propertyPath: m_Name
       value: StatueCheckPoint (3)
@@ -28072,7 +28089,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -28082,7 +28099,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 4
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -28092,7 +28109,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -28122,7 +28139,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -28161,6 +28178,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 923472448, guid: ce26e4217b3230c4389678f25687749d, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 1843530546, guid: ce26e4217b3230c4389678f25687749d, type: 3}
   - m_RefCount: 1
@@ -28169,8 +28188,6 @@ Tilemap:
     m_Data: {fileID: 216861602, guid: ce26e4217b3230c4389678f25687749d, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21449998, guid: ce26e4217b3230c4389678f25687749d, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 1156377549, guid: ce26e4217b3230c4389678f25687749d, type: 3}
   - m_RefCount: 1
@@ -28269,6 +28286,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 578925206428021781, guid: b2dd4d07472b41d479bad0607464a101, type: 3}
+      propertyPath: savetext
+      value: 
+      objectReference: {fileID: 1177779840}
     - target: {fileID: 8123735650827392942, guid: b2dd4d07472b41d479bad0607464a101, type: 3}
       propertyPath: m_Name
       value: StatueCheckPoint

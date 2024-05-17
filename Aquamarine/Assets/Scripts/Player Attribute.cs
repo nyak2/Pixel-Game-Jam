@@ -37,10 +37,6 @@ public class PlayerAttribute : MonoBehaviour
         if (PlayerPrefs.HasKey("AquaHop")) AddAquaHopToAbilityList();
         if (PlayerPrefs.HasKey("HydroWard")) AddHydroWardToAbilityList();
         if (PlayerPrefs.HasKey("PuddleBuddy")) AddPuddleBuddyToAbilityList();
-        abilities.Add(new WaterBed());
-        abilities.Add(new AquaHop());
-        abilities.Add(new HydroWard());
-        abilities.Add(new PuddleBuddy());
     }
 
     // Update is called once per frame
