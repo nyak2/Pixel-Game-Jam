@@ -6,16 +6,21 @@ public class HydroWardStatue : MonoBehaviour
 {
     private bool touched = false;
     private bool abilityAdded = false;
+    [SerializeField] private Dialogue dialogue;
+    [SerializeField] private Player player;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!touched)
         {
-            Player player = Player.instance;
             player._active = false;
+            player.GetComponent<Animator>().Play("idle", 0, 0);
+            if (dialogue != null)
+            {
+                StartCoroutine(BeginDialogue());
+            }
             // Play Dialogue
 
-            player._active = true;
         }
 
         touched = true;
@@ -35,5 +40,15 @@ public class HydroWardStatue : MonoBehaviour
             attribute.AddHydroWardToAbilityList();
         }
         abilityAdded = true;
+    }
+
+    private IEnumerator BeginDialogue()
+    {
+        dialogue.StartDialogue();
+        while (dialogue.started)
+        {
+            yield return null;
+        }
+        player._active = true;
     }
 }

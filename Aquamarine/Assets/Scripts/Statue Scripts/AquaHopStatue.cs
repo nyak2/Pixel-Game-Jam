@@ -6,16 +6,19 @@ public class AquaHopStatue : MonoBehaviour
 {
     private bool touched = false;
     private bool abilityAdded = false;
+    [SerializeField] private Dialogue dialogue;
+    [SerializeField] private Player player;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!touched)
         {
-            Player player = Player.instance;
             player._active = false;
-            // Play Dialogue
-
-            player._active = true;
+            player.GetComponent<Animator>().Play("idle", 0, 0);
+            if (dialogue != null)
+            {
+                StartCoroutine(BeginDialogue());
+            }
         }
 
         touched = true;
@@ -35,5 +38,15 @@ public class AquaHopStatue : MonoBehaviour
             attribute.AddAquaHopToAbilityList();
         }
         abilityAdded = true;
+    }
+
+    private IEnumerator BeginDialogue()
+    {
+        dialogue.StartDialogue();
+        while (dialogue.started)
+        {
+            yield return null;
+        }
+        player._active = true;
     }
 }

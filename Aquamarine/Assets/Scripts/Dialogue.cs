@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 
 public class Dialogue : MonoBehaviour
 {
-    public GameObject textObject;
     public TMP_Text skipObjectText;
     public Image blackScreenObject;
     
