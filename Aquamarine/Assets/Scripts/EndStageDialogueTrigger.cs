@@ -5,10 +5,12 @@ using UnityEngine;
 public class EndStageDialogueTrigger : MonoBehaviour
 {
     [SerializeField] private Dialogue dialogue;
+    [SerializeField] private Player player;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (dialogue != null)
         {
+            player._active = false;
             StartCoroutine(BeginDialogue());
         }
         // Play Dialogue
@@ -20,5 +22,6 @@ public class EndStageDialogueTrigger : MonoBehaviour
         {
             yield return null;
         }
+        player._active = true;
     }
 }
