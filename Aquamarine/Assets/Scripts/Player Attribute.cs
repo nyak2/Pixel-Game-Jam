@@ -37,12 +37,17 @@ public class PlayerAttribute : MonoBehaviour
         if (PlayerPrefs.HasKey("AquaHop")) AddAquaHopToAbilityList();
         if (PlayerPrefs.HasKey("HydroWard")) AddHydroWardToAbilityList();
         if (PlayerPrefs.HasKey("PuddleBuddy")) AddPuddleBuddyToAbilityList();
+        abilities.Add(new WaterBed());
+        abilities.Add(new AquaHop());
+        abilities.Add(new HydroWard());
+        abilities.Add(new PuddleBuddy());
     }
 
     // Update is called once per frame
     void Update()
     {
         UpdateAbility();
+
     }
 
     public void UpdateAbility()
@@ -56,6 +61,8 @@ public class PlayerAttribute : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                Player player = Player.instance;
+                if (player._active)
                 playeranim.Play("ability", 0, 0);
             }
         }

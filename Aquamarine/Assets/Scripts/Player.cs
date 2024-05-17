@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     private bool isJumping;
     [SerializeField] private float jumpradius;
     private float tempJumpPower;
+    public float slowFactor = 1.75f;
 
     [SerializeField] private GameObject shieldObject;
     private GameObject tempObject;
@@ -93,7 +94,6 @@ public class Player : MonoBehaviour
             mostNearByAnchor = instance.findNearbyAnchor();
             if (mostNearByAnchor != null)
             {
-                Debug.Log("Can Teleport");
                 Vector2 anchorPosition = new Vector2(mostNearByAnchor.transform.position.x, mostNearByAnchor.transform.position.y + 0.36f);
                 fakePlayer.transform.position = anchorPosition;
             }
@@ -170,8 +170,8 @@ public class Player : MonoBehaviour
         if (_isProtected)
         {
             _isProtected = false;
-            jumpingPower *= 2f;
-            speed *= 2f;
+            jumpingPower *= slowFactor;
+            speed *= slowFactor;
         }
       
     }
@@ -189,8 +189,8 @@ public class Player : MonoBehaviour
 
     private void SlowPlayerMovement()
     {
-        jumpingPower /= 2f;
-        speed /= 2f;
+        jumpingPower /= slowFactor;
+        speed /= slowFactor;
     }
 
     public void AquaTeleportation()
