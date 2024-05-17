@@ -22,7 +22,8 @@ public class Dialogue : MonoBehaviour
 
     private int index;
     private int charIndex;
-    private bool started;
+    [HideInInspector]
+    public bool started;
     private bool waitForNext;
     private bool isWritting;
     private void Awake()
@@ -41,18 +42,22 @@ public class Dialogue : MonoBehaviour
     {
         if(show)
         {
-            textObject.SetActive(show);
-            blackScreenObject.gameObject.SetActive(show);
+            //textObject.SetActive(show);
+            //blackScreenObject.gameObject.SetActive(show);
 
             blackScreenObject.CrossFadeAlpha(1, 0.5f, false);
-            dialogueText.CrossFadeAlpha(1,0.5f,false);
+            dialogueText.CrossFadeAlpha(1,0.7f,false);
         }
         else
         {
             dialogueText.CrossFadeAlpha(0,0.4f,false);
-            yield return new WaitForSeconds(0.6f);
-            textObject.SetActive(show);
-            blackScreenObject.gameObject.SetActive(show);
+            yield return new WaitForSeconds(0.5f);
+            if (onEnd.GetPersistentEventCount() == 0)
+            {
+                blackScreenObject.CrossFadeAlpha(0, 0.4f, false);
+            }
+            //textObject.SetActive(show);
+            //blackScreenObject.gameObject.SetActive(show);
 
         }
     }
@@ -80,9 +85,9 @@ public class Dialogue : MonoBehaviour
         waitForNext = false;
         ToggleWindow(false);
         yield return new WaitForSeconds(0.5f);
-        if (onEnd != null)
+        if(onEnd.GetPersistentEventCount() > 0)
         {
-            onEnd.Invoke();
+           onEnd.Invoke();
         }
     }
 

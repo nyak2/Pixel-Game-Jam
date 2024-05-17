@@ -27,6 +27,7 @@ public class PlayerAttribute : MonoBehaviour
     [SerializeField] private Animator playeranim;
     [SerializeField] private List<Sprite> abilitesSprites;
     [SerializeField] private Image abilityIcon;
+    [SerializeField] private TextMeshProUGUI abilityText;
 
     private void Start()
     {
@@ -164,6 +165,7 @@ public class PlayerAttribute : MonoBehaviour
             Destroy(obj);
         }
         Player.instance.MakeUnProtected();
+        abilityText.gameObject.SetActive(false);
         Thread.Sleep(100);
         ChangeAbilityUsageStatus(false);
     }
@@ -201,8 +203,10 @@ public class PlayerAttribute : MonoBehaviour
         Vector2 spawnPos = ObtainSpawnPosition();
 
         GameObject tempPlatform = Instantiate(waterPlatform, new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
+        abilityText.gameObject.SetActive(true);
         await Task.Delay(3000);
         Destroy(tempPlatform);
+        abilityText.gameObject.SetActive(false);
         ChangeAbilityUsageStatus(false);
         
     }
@@ -224,6 +228,5 @@ public class PlayerAttribute : MonoBehaviour
             ClearAllAbilities();
         }
     }
-
 
 }

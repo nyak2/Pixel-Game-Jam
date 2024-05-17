@@ -127,13 +127,14 @@ public class Player : MonoBehaviour
 
     private void MiniJump()
     {
-        rb.velocity = new Vector2(0, jumpingPower / 2);
+        rb.velocity = new Vector2(0, jumpingPower / 3);
     }
 
     public void Die()
     {
         _active = false;
         _collider.enabled = false;
+        LeanTween.rotateZ(gameObject,90.0f, 0.4f);
         MiniJump();
         StartCoroutine(Respawn());
     }
@@ -147,8 +148,9 @@ public class Player : MonoBehaviour
     {
         playeranim.Play("idle", 0, 0);
         isJumping = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.6f);
         transform.position = respawnPosition;  
+        transform.rotation = Quaternion.identity;
         _active = true;
         _collider.enabled = true;
         MiniJump();
