@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: faa41099db3632649a86bfda8edad6ca
+guid: 51450cb1801817648ad88de5bddd46ac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Statue_0
+      name: Checkpoint_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd60068c8900c8f49b91148adb3454a1
-      internalID: -172251079
+      spriteID: 551e9657c4932ca488bdf8998ce9e533
+      internalID: 1042141813
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Statue_1
+      name: Checkpoint_1
       rect:
         serializedVersion: 2
         x: 0
@@ -171,8 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9be160cdbb19f74b9f3e086c294f699
-      internalID: -1283920187
+      spriteID: be258c62b7c385b42b7acde90c62180a
+      internalID: 462384894
       vertices: []
       indices: 
       edges: []
@@ -188,8 +188,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Statue_0: -172251079
-      Statue_1: -1283920187
+      Checkpoint_0: 1042141813
+      Checkpoint_1: 462384894
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
