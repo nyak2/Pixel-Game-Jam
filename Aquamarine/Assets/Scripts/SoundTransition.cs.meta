@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 372c57d93f3d90a4a9d5a51589567217
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - normalBgMusic: {fileID: 8300000, guid: 8c9f0df8f6c97fa46b30b7624d81f65c, type: 3}
+  - evilBgMusic: {fileID: 8300000, guid: 9418fea666f819349a47116166e717d9, type: 3}
+  - instenseBgMusic: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
