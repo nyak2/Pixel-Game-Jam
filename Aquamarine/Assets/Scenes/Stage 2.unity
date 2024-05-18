@@ -362,8 +362,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 349318646}
     - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
       propertyPath: dialogues.Array.data[0]
-      value: fddger45erddfgd
+      value: 'Aqua: What was that?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[1]
+      value: 'Aqua: Stay...?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[2]
+      value: 'Ms. Guardian: Something strange has been happening on the island recently...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[3]
+      value: 'Ms. Guardian: A corruption... is spreading... reasons unknown...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[4]
+      value: 'Ms. Guardian: It''s.. affecting my ability.. communicate with....'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[5]
+      value: 'Ms. Guardian: ..explain everything.. you later... For now... go!'
       objectReference: {fileID: 0}
     - target: {fileID: 7003511260169724828, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1291,14 +1315,31 @@ MonoBehaviour:
   blackScreenObject: {fileID: 349318646}
   dialogueText: {fileID: 349318645}
   dialogues:
-  - 2312321edvgfdyr
-  - dtythru5
+  - 'Aqua: By the way, Ms. Guardian, why do the people on this island require the
+    abilities granted by the Aquamarine?'
+  - 'Ms. Guardian: This island, is home to many lives and a tribe of Aquamarine users.'
+  - 'Aqua: A tribe?'
+  - 'Ms. Guardian: People who set foot on this island centuries ago, and had since
+    become its main habitants.'
+  - 'Ms. Guardian: They are the ones who discovered the Aquamarine and its true potential.
+    Nobody is a better expert at the art of harnessing the Aquamarine than them.'
+  - 'Aqua: They do sound extremely powerful!'
+  - 'Ms. Guardian: In order to protect everything here, and the people, the island
+    has to constantly change its form, its terrains.'
+  - 'Aqua: So that means...'
+  - 'Ms. Guardian: This island is alive, Aqua.'
+  - 'Aqua: It''s... alive? Wait a minute, how did you know my name?'
+  - There was no response.
+  - 'Aqua: Hey!'
+  - You hear a distorted message from the statue.
+  - 'Ms. Guardian: You... get out... here... Hydro Ward... protect you..... danger....'
   writingSpeed: 0.02
   onEnd:
     m_PersistentCalls:
       m_Calls: []
   started: 0
   dialogoueSfx: {fileID: 1883288053}
+  showAbilityText: {fileID: 1941059819}
 --- !u!1 &266309341
 GameObject:
   m_ObjectHideFlags: 0
@@ -8907,10 +8948,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1308744239261287010, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1869195815887043551, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -8918,6 +8955,22 @@ PrefabInstance:
     - target: {fileID: 1869195815887043551, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4528099222020212322, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.7882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 4528099222020212322, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4528099222020212322, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.13333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4528099222020212322, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4291415074
       objectReference: {fileID: 0}
     - target: {fileID: 5168317522833811555, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
       propertyPath: m_Pivot.x
@@ -8999,9 +9052,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7911620326538369045, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 6843475877610508330, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.7882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843475877610508330, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843475877610508330, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.13333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843475877610508330, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4291415074
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9073,11 +9138,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 721451118495544226, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.55
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 721451118495544226, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.33
+      value: -3.06
       objectReference: {fileID: 0}
     - target: {fileID: 721451118495544226, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11569,6 +11634,114 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &516868219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 516868222}
+  - component: {fileID: 516868221}
+  - component: {fileID: 516868220}
+  m_Layer: 0
+  m_Name: Start Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &516868220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516868219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f525211ccc55d4546a367f20c00c0f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skipObjectText: {fileID: 349318644}
+  blackScreenObject: {fileID: 349318646}
+  dialogueText: {fileID: 349318645}
+  dialogues:
+  - You lost consciousness for a few minutes...
+  - 'Aqua: Am I home?'
+  - You open your eyes, only to be in a familiar place, once again.
+  - 'Aqua: Somehow I ended up worse, I''m stuck!'
+  - You got a glimpse of something blue on the floor. It's a puddle of water.
+  - 'Aqua: I guess I''ll use Water Bed to get out of here first.'
+  - 'Aqua: I might run into another Ms. Guardian statue if I''m lucky enough.'
+  writingSpeed: 0.02
+  onEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  started: 0
+  dialogoueSfx: {fileID: 1883288053}
+  showAbilityText: {fileID: 0}
+--- !u!61 &516868221
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516868219}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.04026103, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91947794, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &516868222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516868219}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.58, y: -3.17, z: -1.0776074}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &517926335
 GameObject:
   m_ObjectHideFlags: 0
@@ -13767,14 +13940,27 @@ MonoBehaviour:
   blackScreenObject: {fileID: 349318646}
   dialogueText: {fileID: 349318645}
   dialogues:
-  - dasdsrw453
-  - fhruybyjyr
+  - 'Aqua: Ms. Guardian!'
+  - 'Ms. Guardian: Wait, this doesn''t make any sense. How are you still..?'
+  - 'Aqua: That''s what I wanted to ask you! I thought I was gonna go home!'
+  - 'Ms. Guardian: This is impossible... Had Aqua Hop lost its full power?'
+  - 'You overhear Ms. Guardian whispering something very softly. '
+  - 'Ms. Guardian (To herself): Is it because of the... Unbelievable.'
+  - 'Ms. Guardian: We need to get you out right now!'
+  - You took a step back, surprised to hear Ms. Guardian speaking in such a serious
+    and demanding tone.
+  - It sounded as if she is worried about something. Something bad.
+  - 'Ms. Guardian: Here you go! The power of teleportation, Aqua Hop. This should
+    help you phase into any water body and appear on the water body closest to you
+    in a set range.'
+  - 'Aqua: Thanks... I guess I have to rely on this stone a little longer, for now.'
   writingSpeed: 0.02
   onEnd:
     m_PersistentCalls:
       m_Calls: []
   started: 0
   dialogoueSfx: {fileID: 1883288053}
+  showAbilityText: {fileID: 901327721}
 --- !u!1 &884698184
 GameObject:
   m_ObjectHideFlags: 0
@@ -13859,6 +14045,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &901327721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 142726202525419206, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+  m_PrefabInstance: {fileID: 349318643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &901691197
 GameObject:
   m_ObjectHideFlags: 0
@@ -42543,6 +42734,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1941059819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6930270438746361974, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+  m_PrefabInstance: {fileID: 349318643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2067704390
 GameObject:
   m_ObjectHideFlags: 0
@@ -43076,3 +43272,4 @@ SceneRoots:
   - {fileID: 1107126400}
   - {fileID: 1820516488}
   - {fileID: 1883288050}
+  - {fileID: 516868222}

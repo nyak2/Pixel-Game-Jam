@@ -1060,9 +1060,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7944029483011771298, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 7944029483011771298, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5168317522833811555, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1510544660}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
 --- !u!114 &634719704 stripped
@@ -1098,6 +1109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &634719707 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5168317522833811555, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+  m_PrefabInstance: {fileID: 634719703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &640886897
 GameObject:
   m_ObjectHideFlags: 0
@@ -8790,7 +8806,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: eb5be1d979d8b704a9419e2eefaf6cab, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 5be24672f331d6f4f8b1d9bc27726c74, type: 2}
+    m_Data: {fileID: 11400000, guid: 07ee21f0640deb1489f95f2d4049905b, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 65b4b3ba1834fd9429a3a517807b07ed, type: 2}
   - m_RefCount: 3
@@ -8871,7 +8887,7 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: 377584705, guid: ce26e4217b3230c4389678f25687749d, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -911140886, guid: ce26e4217b3230c4389678f25687749d, type: 3}
+    m_Data: {fileID: 1572828347, guid: b96fd193223ddc744afc20825e398d6c, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -741205375, guid: ce26e4217b3230c4389678f25687749d, type: 3}
   - m_RefCount: 1
@@ -9127,14 +9143,6 @@ CompositeCollider2D:
         Y: 110000000
       - X: -80000000
         Y: 110000000
-    - - X: 150000000
-        Y: 220000000
-      - X: 150000000
-        Y: 227500000
-      - X: 160000000
-        Y: 227500000
-      - X: 160000000
-        Y: 220000000
     - - X: 10000000
         Y: 150000000
       - X: 0
@@ -9431,10 +9439,6 @@ CompositeCollider2D:
       - {x: 13.999971, y: 22}
       - {x: -9, y: 21.999971}
       - {x: -8.99997, y: 11}
-    - - {x: 16, y: 22.000029}
-      - {x: 15, y: 22.000029}
-      - {x: 15.000029, y: 22.75}
-      - {x: 16, y: 22.749971}
     - - {x: 8.99997, y: 12}
       - {x: 8.99997, y: 17}
       - {x: 2, y: 16.999971}
@@ -10491,16 +10495,41 @@ MonoBehaviour:
   blackScreenObject: {fileID: 634719706}
   dialogueText: {fileID: 634719705}
   dialogues:
-  - Helllog tngrtij4tnh tjihtjh vvthtjicnfjvnwjigngjrbgrkbgrbrb
-  - th eojewtibh3c hyj  t r23re ;e'lfgregsvdsger
-  - er234gfgbfdgfgf
-  - dsa rerfwefewbkdfnmg
+  - You came across a mysterious looking statue...
+  - Not knowing where you are or what is going on, you decided to touch the statue.
+  - You hear a soft voice whispering to you.
+  - '???: You... you don''t belong here.'
+  - 'Aqua: Whoa! The statue talks?!'
+  - '???: You have to get out of here. Before it''s too late.'
+  - 'Aqua: Do you know what is this place? And WHO exactly are you?'
+  - '???: This is an island that does not exist in your world, as for my identity,
+    you may refer to me as the Guardian of this island. '
+  - 'Aqua: Seems fair enough.'
+  - 'Aqua: Ms... Guardian? I need your help, I don''t want to stay here any longer...'
+  - 'Guardian: A human like you shouldn''t have set foot here. Here, have this.'
+  - You suddenly feel something in your hands.
+  - 'Aqua: Wow! It just appeared in my hand! You really are the guardian of this
+    place.'
+  - 'Guardian: That is an Aquamarine, a stone originated from the water depths of
+    this island.'
+  - 'Guardian: The Aquamarine gives whoever acquires it the power to manipulate the
+    waters here.'
+  - 'Guardian: It should give you one of the simplest ability known to Aquamarine
+    users, Water Bed.'
+  - 'Guardian: Water Bed allows you to create a water platform, which assists you
+    in reaching higher grounds.'
+  - 'Guardian: Also, standing on water bodies should grant you enhanced jumping capabilities,
+    it''s same for all Aquamarine users.'
+  - 'Guardian: Good luck, I hope you make it out of here.'
+  - 'Guardian: Don''t worry as I will be watching over you the whole time.'
+  - 'Guardian: Now go!'
   writingSpeed: 0.02
   onEnd:
     m_PersistentCalls:
       m_Calls: []
   started: 0
   dialogoueSfx: {fileID: 757271966}
+  showAbilityText: {fileID: 1510544659}
 --- !u!82 &993789418 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 393529179422565616, guid: 93e188cee1907f142ae3e36248bcb3fe, type: 3}
@@ -26008,6 +26037,140 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1510544659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1510544660}
+  - component: {fileID: 1510544662}
+  - component: {fileID: 1510544661}
+  m_Layer: 5
+  m_Name: 'Ability: Water Bed Obtained!'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1510544660
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510544659}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 634719707}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1367, y: 289}
+  m_SizeDelta: {x: 811.2074, y: 97.4366}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1510544661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510544659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Ability: Water Bed Obtained!'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4291415074
+  m_fontColor: {r: 0.13238695, g: 0.8018868, b: 0.7891343, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 70
+  m_fontSizeBase: 70
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 4
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1510544662
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510544659}
+  m_CullTransparentMesh: 1
 --- !u!1 &1624043597
 GameObject:
   m_ObjectHideFlags: 0
@@ -28017,6 +28180,75 @@ PrefabInstance:
       propertyPath: blackScreenObject
       value: 
       objectReference: {fileID: 634719706}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[0]
+      value: 'Aqua: Ms. Guardian, you awake yet?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[1]
+      value: .....
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[2]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[3]
+      value: 'Aqua: Hello?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[4]
+      value: .....
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[5]
+      value: ....
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[6]
+      value: 'Aqua: Oh no please don''t tell me you''re gone already?!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[7]
+      value: 'Guardian: I''m here.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[8]
+      value: 'Aqua: Oh thank goodness! I thought I''ve sucked off your powers with
+        how much I was using this thing for!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[9]
+      value: 'Guardian: Oh no we Guardians do not rely on the Aquamarine to live
+        on.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[10]
+      value: 'Guardian: As long as there are water flowing on this island, our presence
+        never truly fades away.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[11]
+      value: 'Guardian: We need to get you out of here as soon as possible. Please
+        get in to the water body right infront of you. I will use Aqua Hop to send
+        you away, hopefully somewhere safe.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[12]
+      value: You follow Ms. Guardian's instructions and stood on the water source.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[13]
+      value: Suddenly, a blinding ray of blue emits from the bottom of your feet.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[14]
+      value: 'Aqua: Arghhh!! My eyes!!'
+      objectReference: {fileID: 0}
     - target: {fileID: 7003511260169724828, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.512
@@ -28129,8 +28361,46 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8123735650827392942, guid: b2dd4d07472b41d479bad0607464a101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6720785077451193534}
   m_SourcePrefab: {fileID: 100100000, guid: b2dd4d07472b41d479bad0607464a101, type: 3}
+--- !u!1 &6720785077451193533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8123735650827392942, guid: b2dd4d07472b41d479bad0607464a101, type: 3}
+  m_PrefabInstance: {fileID: 6720785077451193532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6720785077451193534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6720785077451193533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f525211ccc55d4546a367f20c00c0f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skipObjectText: {fileID: 634719704}
+  blackScreenObject: {fileID: 634719706}
+  dialogueText: {fileID: 634719705}
+  dialogues:
+  - Out in the open, there stands another familiar looking statue...
+  - 'Aqua: Ms. Guardian, is that you?'
+  - 'The statue doesn''t respond. However, you still feel a strong presence. It puts
+    your mind at peace. '
+  - 'Aqua: Maybe she fell asleep?'
+  - Maybe she is, maybe she's not, but you know this is where you will always come
+    back to when something goes wrong.
+  writingSpeed: 0.02
+  onEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  started: 0
+  dialogoueSfx: {fileID: 757271966}
+  showAbilityText: {fileID: 0}
 --- !u!1001 &8836006725592003678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28141,11 +28411,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 721451118495544226, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.48
+      value: -7.51
       objectReference: {fileID: 0}
     - target: {fileID: 721451118495544226, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.09
+      value: -3.13
       objectReference: {fileID: 0}
     - target: {fileID: 721451118495544226, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: m_LocalPosition.z

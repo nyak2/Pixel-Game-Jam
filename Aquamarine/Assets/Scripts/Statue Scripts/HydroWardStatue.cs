@@ -51,4 +51,5 @@ public class HydroWardStatue : MonoBehaviour
         }
         player._active = true;
     }
+
 }

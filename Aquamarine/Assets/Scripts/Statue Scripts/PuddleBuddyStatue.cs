@@ -50,4 +50,5 @@ public class PuddleBuddyStatue : MonoBehaviour
         }
         player._active = true;
     }
+
 }

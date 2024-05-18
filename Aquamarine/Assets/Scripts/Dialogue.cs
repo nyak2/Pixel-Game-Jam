@@ -27,6 +27,8 @@ public class Dialogue : MonoBehaviour
     private bool isWritting;
 
     [SerializeField] private AudioSource dialogoueSfx;
+    [SerializeField] private GameObject showAbilityText = null;
+
     private void Awake()
     {
         blackScreenObject.CrossFadeAlpha(0, 0.2f, false);
@@ -84,10 +86,21 @@ public class Dialogue : MonoBehaviour
         waitForNext = false;
         ToggleWindow(false);
         yield return new WaitForSeconds(0.5f);
-        if(onEnd.GetPersistentEventCount() > 0)
+        if (onEnd.GetPersistentEventCount() > 0)
         {
            onEnd.Invoke();
         }
+        if (showAbilityText != null) StartCoroutine(ShowSaveText());
+    }
+
+    private IEnumerator ShowSaveText()
+    {
+        Vector3 tempos = showAbilityText.transform.position;
+        LeanTween.moveLocalX(showAbilityText, 0, 0.5f).setEaseOutBack();
+        yield return new WaitForSeconds(1.5f);
+        LeanTween.moveLocalX(showAbilityText, -1367, 0.5f).setEaseInBack();
+        yield return new WaitForSeconds(1.0f);
+        showAbilityText.transform.position = tempos;
     }
 
     IEnumerator Writing()

@@ -51,4 +51,5 @@ public class WaterBedStatue : MonoBehaviour
         }
         player._active = true;
     }
+
 }

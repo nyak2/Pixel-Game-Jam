@@ -49,4 +49,5 @@ public class AquaHopStatue : MonoBehaviour
         }
         player._active = true;
     }
+
 }
