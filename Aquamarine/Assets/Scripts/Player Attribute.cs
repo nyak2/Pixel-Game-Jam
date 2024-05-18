@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
-using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,6 +26,11 @@ public class PlayerAttribute : MonoBehaviour
     [SerializeField] private List<Sprite> abilitesSprites;
     [SerializeField] private Image abilityIcon;
     [SerializeField] private TextMeshProUGUI flashText;
+    [SerializeField] private Vector3 size;
+
+    [Header("Audio Sources")]
+    [SerializeField] private AudioSource abilitysfx;
+    [SerializeField] private AudioSource cancelAbilitySfx;
 
     private void Start()
     {
@@ -43,7 +46,6 @@ public class PlayerAttribute : MonoBehaviour
     void Update()
     {
         UpdateAbility();
-
     }
 
     public void UpdateAbility()
@@ -59,7 +61,9 @@ public class PlayerAttribute : MonoBehaviour
             {
                 Player player = Player.instance;
                 if (player._active)
-                playeranim.Play("ability", 0, 0);
+                {
+                    playeranim.Play("ability", 0, 0);
+                }
             }
         }
 
@@ -175,12 +179,12 @@ public class PlayerAttribute : MonoBehaviour
 
     public bool IsOnWaterSource()
     {
-        return Physics2D.OverlapCircle(waterCheck.position, 0.2f, waterLayer);
+        return Physics2D.OverlapBox(waterCheck.position, size, 0, waterLayer);
     }
 
     public bool IsOnWaterPlatform()
     {
-        return Physics2D.OverlapCircle(waterCheck.position, 0.2f, waterPlatformLayer);
+        return Physics2D.OverlapBox(waterCheck.position, size, 0, waterPlatformLayer);
     }
 
     public static void ChangeAbilityUsageStatus(bool b)
@@ -188,30 +192,40 @@ public class PlayerAttribute : MonoBehaviour
         isAbilityBeingUsed = b;
     }
 
-    public async void SpawnWaterSource()
+    public void SpawnWaterSource()
+    {
+        StartCoroutine(StartSpawnWaterSource());
+    }
+
+    private IEnumerator StartSpawnWaterSource()
     {
         ClearCurrentAbilityObject("Movable Water Source(Clone)");
         Vector2 spawnPos = ObtainSpawnPosition();
         
         GameObject tempWaterSource = Instantiate(waterSource, new Vector3(spawnPos.x,spawnPos.y - spawnOffSet,0), Quaternion.identity);
         ChangeAbilityUsageStatus(false);
-        await Task.Delay(10000);
+        yield return new WaitForSeconds(10.0f);
         Destroy(tempWaterSource);
 
     }
 
-    public async void SpawnWaterPlatform()
+    public void SpawnWaterPlatform()
+    {
+        StartCoroutine(StartSpawnWaterPlatform());
+    }
+
+    private IEnumerator StartSpawnWaterPlatform()
     {
         ClearCurrentAbilityObject("Water Platform(Clone)");
         Vector2 spawnPos = ObtainSpawnPosition();
 
         GameObject tempPlatform = Instantiate(waterPlatform, new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
         flashText.gameObject.SetActive(true);
-        await Task.Delay(3000);
+        yield return new WaitForSeconds(3.0f);
         Destroy(tempPlatform);
         flashText.gameObject.SetActive(false);
         ChangeAbilityUsageStatus(false);
-        
+
     }
 
     private Vector2 ObtainSpawnPosition()
@@ -221,15 +235,24 @@ public class PlayerAttribute : MonoBehaviour
 
     public void EnableAbility()
     {
+        StopAllCoroutines();
         if (!isAbilityBeingUsed)
         {
+            abilitysfx.Play();
             currentAbility.UseAbility();
         }
         else
         {
+            cancelAbilitySfx.Play();
             // Clears All Abilities if Use Ability is Pressed While An Ability is Being Used.
             ClearAllAbilities();
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(waterCheck.position, size);
     }
 
 }

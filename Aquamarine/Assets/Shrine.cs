@@ -8,6 +8,7 @@ public class Shrine : MonoBehaviour
 {
     private bool saved = false;
     [SerializeField] private GameObject savetext;
+    [SerializeField] private AudioSource checkpointSfx;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,6 +17,7 @@ public class Shrine : MonoBehaviour
             var player = collision.GetComponent<Player>();
             if (player != null)
             {
+                checkpointSfx.Play();
                 player.SetRespawnPoint(player.transform.position);
                 saved = true;
                 StartCoroutine(ShowSaveText());

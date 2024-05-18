@@ -161,8 +161,14 @@ MonoBehaviour:
   _active: 1
   fakePlayer: {fileID: 0}
   playeranim: {fileID: 8762606102014387717}
-  jumpradius: 0.26
+  size: {x: 0.5, y: 0.25, z: 0}
+  slowFactor: 1.75
   shieldObject: {fileID: 949361058593428175, guid: 2c46eb1ab87caae4586489da041e9b99, type: 3}
+  loseSfx: {fileID: 0}
+  runSfx: {fileID: 0}
+  jumpSfx: {fileID: 0}
+  normalRunClip: {fileID: 8300000, guid: c24ff32513daa074987142259ce329d7, type: 3}
+  puddleRunClip: {fileID: 8300000, guid: a329a12aa1c4e864ea10c39522c8f3fa, type: 3}
 --- !u!114 &8386672041919660383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +198,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 116e092b0610e964fb22c2afeb89ca01, type: 3}
   - {fileID: 21300000, guid: c285ae0d0555c6443b944f9ff6d58489, type: 3}
   abilityIcon: {fileID: 0}
+  flashText: {fileID: 0}
+  size: {x: 0.45, y: 0.25, z: 0}
+  abilitysfx: {fileID: 0}
+  cancelAbilitySfx: {fileID: 0}
 --- !u!61 &4058576702094806307
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -224,7 +234,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01355505, y: -0.05596578}
+  m_Offset: {x: 0.018458128, y: -0.05596578}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -235,7 +245,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.55071926, y: 1.4879076}
+  m_Size: {x: 0.49384165, y: 1.4879076}
   m_EdgeRadius: 0.04
 --- !u!1 &8380531100367687563
 GameObject:
@@ -263,7 +273,7 @@ Transform:
   m_GameObject: {fileID: 8380531100367687563}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -0.83, z: 0}
+  m_LocalPosition: {x: 0.022, y: -0.924, z: 0}
   m_LocalScale: {x: 0.17, y: 0.14, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

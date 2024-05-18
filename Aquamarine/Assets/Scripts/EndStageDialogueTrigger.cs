@@ -11,6 +11,7 @@ public class EndStageDialogueTrigger : MonoBehaviour
         if (dialogue != null)
         {
             player._active = false;
+            player.GetComponent<Animator>().Play("idle", 0, 0);
             StartCoroutine(BeginDialogue());
         }
         // Play Dialogue

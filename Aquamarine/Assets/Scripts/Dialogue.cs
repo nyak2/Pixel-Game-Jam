@@ -25,9 +25,11 @@ public class Dialogue : MonoBehaviour
     public bool started;
     private bool waitForNext;
     private bool isWritting;
+
+    [SerializeField] private AudioSource dialogoueSfx;
     private void Awake()
     {
-        blackScreenObject.CrossFadeAlpha(0, 0.5f, false);
+        blackScreenObject.CrossFadeAlpha(0, 0.2f, false);
         ToggleWindow(false);
     }
 
@@ -45,6 +47,7 @@ public class Dialogue : MonoBehaviour
             //blackScreenObject.gameObject.SetActive(show);
 
             blackScreenObject.CrossFadeAlpha(1, 0.5f, false);
+            yield return new WaitForSeconds(0.5f);
             dialogueText.CrossFadeAlpha(1,0.7f,false);
         }
         else
@@ -62,9 +65,6 @@ public class Dialogue : MonoBehaviour
     }
     public void StartDialogue()
     {
-        if (started)
-            return;
-
         started = true;
         isWritting = true; //IDK why but yes
         ToggleWindow(true); //Show the window
@@ -116,7 +116,6 @@ public class Dialogue : MonoBehaviour
     }
     private void Update()
     {
-
         if (!started)
             return;
 
@@ -131,6 +130,7 @@ public class Dialogue : MonoBehaviour
 
         if (waitForNext && Input.GetMouseButtonDown(0))
         {
+            dialogoueSfx.Play();
             isWritting = true;
             waitForNext = false;
             index++;

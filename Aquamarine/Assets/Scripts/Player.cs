@@ -30,12 +30,21 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Animator playeranim;
     private bool isJumping;
-    [SerializeField] private float jumpradius;
+    [SerializeField] private Vector3 size;
     private float tempJumpPower;
     public float slowFactor = 1.75f;
 
     [SerializeField] private GameObject shieldObject;
     private GameObject tempObject;
+    private bool isRunning;
+
+    [Header("Audio Sources")]
+    [SerializeField] private AudioSource loseSfx;
+    [SerializeField] private AudioSource runSfx;
+    [SerializeField] private AudioSource jumpSfx;
+    [SerializeField] private AudioClip normalRunClip;
+    [SerializeField] private AudioClip puddleRunClip;
+
     private void Start()
     {
         instance = this;
@@ -52,12 +61,41 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (!_active || playeranim.GetCurrentAnimatorStateInfo(0).IsName("ability"))
         {
             isJumping = false;
+            jumpSfx.Stop();
+            runSfx.Stop();
             rb.velocity = new Vector3(0,rb.velocity.y,0);
             return;
+        }
+
+
+        if(isRunning && !isJumping && playeranim.GetCurrentAnimatorStateInfo(0).IsName("run"))
+        {
+            if(isGrounded())
+            {
+                runSfx.clip = normalRunClip;
+            }
+            else if(PlayerAttribute.instance.IsOnWaterSource() ||
+            PlayerAttribute.instance.IsOnWaterPlatform())
+            {
+                runSfx.clip = puddleRunClip;
+            }
+
+            if (!isGrounded() &&
+            !PlayerAttribute.instance.IsOnWaterSource() &&
+            !PlayerAttribute.instance.IsOnWaterPlatform())
+            {
+                runSfx.Stop();
+            }
+            else
+            {
+                if(!runSfx.isPlaying)
+                {
+                    runSfx.Play();
+                }
+            }
         }
 
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -65,10 +103,14 @@ public class Player : MonoBehaviour
 
         if (playeranim.GetCurrentAnimatorStateInfo(0).IsName("idle") && rb.velocity.x != 0 && !isJumping)
         {
-            playeranim.Play("start run", 0, 0);
+            PlayRunAudio();
+            isRunning = true;
+            playeranim.Play("run", 0, 0);
         }
         else if((playeranim.GetCurrentAnimatorStateInfo(0).IsName("run") || playeranim.GetCurrentAnimatorStateInfo(0).IsName("start run") )&& rb.velocity.x == 0 && !isJumping)
         {
+            runSfx.Stop();
+            isRunning = false;
             playeranim.Play("idle", 0, 0);
         }
 
@@ -77,6 +119,8 @@ public class Player : MonoBehaviour
             PlayerAttribute.instance.IsOnWaterPlatform()))
         {
             isJumping = true;
+            runSfx.Stop();
+            jumpSfx.Play();
             playeranim.Play("start jump", 0, 0);
         }
 
@@ -106,7 +150,7 @@ public class Player : MonoBehaviour
 
     public bool isGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, jumpradius, groundLayer);
+        return Physics2D.OverlapBox(groundCheck.position, size, 0, groundLayer);
     }
 
     private void Flip()
@@ -147,8 +191,11 @@ public class Player : MonoBehaviour
     private IEnumerator Respawn()
     {
         playeranim.Play("idle", 0, 0);
+        playeranim.enabled = false;
         isJumping = false;
-        yield return new WaitForSeconds(0.6f);
+        loseSfx.Play();
+        yield return new WaitForSeconds(0.8f);
+        playeranim.enabled = true;
         transform.position = respawnPosition;  
         transform.rotation = Quaternion.identity;
         _active = true;
@@ -235,7 +282,7 @@ public class Player : MonoBehaviour
 
     public void CheckForFalling()
     {
-        if(rb.velocity.y <= 0 && (isGrounded() || PlayerAttribute.instance.IsOnWaterPlatform() || PlayerAttribute.instance.IsOnWaterSource()))
+        if(rb.velocity.y <= 0.1f && (isGrounded() || PlayerAttribute.instance.IsOnWaterPlatform() || PlayerAttribute.instance.IsOnWaterSource()))
         {
             playeranim.Play("jump end");
 
@@ -261,9 +308,14 @@ public class Player : MonoBehaviour
 
     }
 
+    public void PlayRunAudio()
+    {
+        runSfx.PlayDelayed(0.12f);
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(groundCheck.position, jumpradius);
+        Gizmos.DrawWireCube(groundCheck.position, size);
     }
 }
