@@ -25725,6 +25725,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &1386218964 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8074119236047714229, guid: 93e188cee1907f142ae3e36248bcb3fe, type: 3}
+  m_PrefabInstance: {fileID: 1024650704902809718}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1480610648
 GameObject:
   m_ObjectHideFlags: 0
@@ -28202,6 +28207,10 @@ PrefabInstance:
       propertyPath: abilityIcon
       value: 
       objectReference: {fileID: 1735272431}
+    - target: {fileID: 8386672041919660383, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
+      propertyPath: abilitySelectSfx
+      value: 
+      objectReference: {fileID: 1386218964}
     - target: {fileID: 8386672041919660383, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: cancelAbilitySfx
       value: 

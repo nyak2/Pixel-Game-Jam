@@ -361,6 +361,10 @@ PrefabInstance:
       propertyPath: blackScreenObject
       value: 
       objectReference: {fileID: 349318646}
+    - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
+      propertyPath: dialogues.Array.data[0]
+      value: fddger45erddfgd
+      objectReference: {fileID: 0}
     - target: {fileID: 7003511260169724828, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.48
@@ -9148,6 +9152,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 349318647}
     - target: {fileID: 8386672041919660383, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
+      propertyPath: abilitySelectSfx
+      value: 
+      objectReference: {fileID: 1363849855}
+    - target: {fileID: 8386672041919660383, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: cancelAbilitySfx
       value: 
       objectReference: {fileID: 1883288056}
@@ -15907,6 +15915,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &1363849855 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8074119236047714229, guid: 93e188cee1907f142ae3e36248bcb3fe, type: 3}
+  m_PrefabInstance: {fileID: 1883288050}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1371936845
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,7 +48,7 @@ public class Dialogue : MonoBehaviour
 
             blackScreenObject.CrossFadeAlpha(1, 0.5f, false);
             yield return new WaitForSeconds(0.5f);
-            dialogueText.CrossFadeAlpha(1,0.7f,false);
+            dialogueText.CrossFadeAlpha(1,0.4f,false);
         }
         else
         {

@@ -6,9 +6,15 @@ public class SoundTransition : MonoBehaviour
 {
     public AudioSource bgMusic;
     public AudioClip instenseBgMusic;
+    private bool once;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        bgMusic.clip = instenseBgMusic;
+        if(!once)
+        {
+            bgMusic.clip = instenseBgMusic;
+            bgMusic.Play();
+            once = true;
+        }
     }
 }

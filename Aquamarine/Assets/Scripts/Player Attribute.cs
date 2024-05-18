@@ -31,6 +31,7 @@ public class PlayerAttribute : MonoBehaviour
     [Header("Audio Sources")]
     [SerializeField] private AudioSource abilitysfx;
     [SerializeField] private AudioSource cancelAbilitySfx;
+    [SerializeField] private AudioSource abilitySelectSfx;
 
     private void Start()
     {
@@ -81,6 +82,7 @@ public class PlayerAttribute : MonoBehaviour
                 {
                     i += 1;
                 }
+                abilitySelectSfx.Play();
             }
             else if (Input.GetAxis("Mouse ScrollWheel") > 0)
             {
@@ -92,6 +94,7 @@ public class PlayerAttribute : MonoBehaviour
                 {
                     i -= 1;
                 }
+                abilitySelectSfx.Play();
             }
             else
             {

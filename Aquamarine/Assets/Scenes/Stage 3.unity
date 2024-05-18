@@ -17626,7 +17626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgMusic: {fileID: 3925997722026756481}
-  instenseBgMusic: {fileID: 0}
+  instenseBgMusic: {fileID: 8300000, guid: 8b8a38af8b71e334fac4147e56128d3e, type: 3}
 --- !u!1 &281961173
 GameObject:
   m_ObjectHideFlags: 0
@@ -18154,6 +18154,10 @@ PrefabInstance:
       propertyPath: abilityText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8386672041919660383, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
+      propertyPath: abilitySelectSfx
+      value: 
+      objectReference: {fileID: 1013271866}
     - target: {fileID: 8386672041919660383, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: cancelAbilitySfx
       value: 
@@ -30352,6 +30356,11 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!82 &1013271866 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8074119236047714229, guid: 93e188cee1907f142ae3e36248bcb3fe, type: 3}
+  m_PrefabInstance: {fileID: 1067103675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1021686384
 GameObject:
   m_ObjectHideFlags: 0
@@ -50340,7 +50349,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8c9f0df8f6c97fa46b30b7624d81f65c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4a6b29fa35f4f8e4e89f55805103acbc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7
   m_Pitch: 1
