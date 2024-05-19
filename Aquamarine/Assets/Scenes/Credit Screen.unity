@@ -1655,7 +1655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &298094466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4070,7 +4070,7 @@ MonoBehaviour:
     by Anokolisa
 
 
-    Legacy_Adventure_Pack_CRYPT
+    Legacy_Adventure_Pack_CEMETARY
 
     by
     Anokolisa
