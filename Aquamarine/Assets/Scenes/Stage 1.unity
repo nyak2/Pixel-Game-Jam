@@ -11158,19 +11158,19 @@ MonoBehaviour:
   - You suddenly feel something in your hands.
   - 'Aqua: Wow! It just appeared in my hand! You really are the guardian of this
     place.'
-  - 'Guardian: That is an Aquamarine, a stone originated from the water depths of
-    this island.'
-  - 'Guardian: The Aquamarine gives whoever acquires it the power to manipulate the
-    waters here.'
-  - 'Guardian: It should give you one of the simplest ability known to Aquamarine
+  - 'Ms. Guardian: That is an Aquamarine, a stone originated from the water depths
+    of this island.'
+  - 'Ms. Guardian: The Aquamarine gives whoever acquires it the power to manipulate
+    the waters here.'
+  - 'Ms. Guardian: It should give you one of the simplest ability known to Aquamarine
     users, Water Bed.'
-  - 'Guardian: Water Bed allows you to create a water platform, which assists you
-    in reaching higher grounds.'
-  - 'Guardian: Also, standing on water bodies should grant you enhanced jumping capabilities,
-    it''s same for all Aquamarine users.'
-  - 'Guardian: Good luck, I hope you make it out of here.'
-  - 'Guardian: Don''t worry as I will be watching over you the whole time.'
-  - 'Guardian: Now go!'
+  - 'Ms. Guardian: Water Bed allows you to create a water platform, which assists
+    you in reaching higher grounds.'
+  - 'Ms. Guardian: Also, standing on water bodies should grant you enhanced jumping
+    capabilities, it''s the same for all Aquamarine users.'
+  - 'Ms. Guardian: Good luck, I hope you make it out of here.'
+  - 'Ms. Guardian: Don''t worry as I will be watching over you the whole time.'
+  - 'Ms. Guardian: Now go!'
   writingSpeed: 0.02
   onEnd:
     m_PersistentCalls:
@@ -29909,7 +29909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
       propertyPath: dialogues.Array.data[7]
-      value: 'Guardian: I''m here.'
+      value: 'Ms. Guardian: I''m here.'
       objectReference: {fileID: 0}
     - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
       propertyPath: dialogues.Array.data[8]
@@ -29918,17 +29918,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
       propertyPath: dialogues.Array.data[9]
-      value: 'Guardian: Oh no we Guardians do not rely on the Aquamarine to live
+      value: 'Ms. Guardian: Oh no we Guardians do not rely on the Aquamarine to live
         on.'
       objectReference: {fileID: 0}
     - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
       propertyPath: dialogues.Array.data[10]
-      value: 'Guardian: As long as there are water flowing on this island, our presence
-        never truly fades away.'
+      value: 'Ms. Guardian: As long as there are water flowing on this island, our
+        presence never truly fades away.'
       objectReference: {fileID: 0}
     - target: {fileID: 4941634754069986155, guid: dfe31b319dcf35f40a8e37c9f870aa73, type: 3}
       propertyPath: dialogues.Array.data[11]
-      value: 'Guardian: We need to get you out of here as soon as possible. Please
+      value: 'Ms. Guardian: We need to get you out of here as soon as possible. Please
         get in to the water body right infront of you. I will use Aqua Hop to send
         you away, hopefully somewhere safe.'
       objectReference: {fileID: 0}
@@ -30095,8 +30095,8 @@ MonoBehaviour:
   - 'The statue doesn''t respond. However, you still feel a strong presence. It puts
     your mind at peace. '
   - 'Aqua: Maybe she fell asleep?'
-  - Maybe she is, maybe she's not, but you know this is where you will always come
-    back to when something goes wrong.
+  - Maybe she is, maybe she's not, but you know for sure that this is where you will
+    always return to when something ever goes wrong.
   writingSpeed: 0.02
   onEnd:
     m_PersistentCalls:

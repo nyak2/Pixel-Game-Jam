@@ -2948,7 +2948,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lead Programmer/Designer
+  m_text: Lead Programmer/Designer/Story
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}

@@ -74,7 +74,7 @@ public class PlayerAttribute : MonoBehaviour
         if (abilities.Count > 0)
         {
             abilityIcon.color = new Color(1f, 1f, 1f, 1f);
-
+            int temp = i;
             if (Input.GetAxis("Mouse ScrollWheel") < 0)
             {
                 if (i == abilities.Count - 1)
@@ -84,8 +84,7 @@ public class PlayerAttribute : MonoBehaviour
                 else
                 {
                     i += 1;
-                }
-                abilitySelectSfx.Play();
+                }              
             }
             else if (Input.GetAxis("Mouse ScrollWheel") > 0)
             {
@@ -97,7 +96,6 @@ public class PlayerAttribute : MonoBehaviour
                 {
                     i -= 1;
                 }
-                abilitySelectSfx.Play();
             }
             else
             {
@@ -105,25 +103,35 @@ public class PlayerAttribute : MonoBehaviour
                 {
                     case "1":
                         if (abilities.Count >= 1)
+                        {
                             i = 0;
+                        }                          
                         break;
 
                     case "2":
                         if (abilities.Count >=2)
+                        {
                             i = 1;
+                        }
                         break;
 
                     case "3":
                         if (abilities.Count >= 3)
+                        {
                             i = 2;
+                        }                          
                         break;
 
                     case "4":
                         if (abilities.Count >= 4)
+                        {
                             i = 3;
+                        }                          
                         break;
                 }
             }
+            if (i != temp)
+                abilitySelectSfx.Play();
             currentAbility = abilities[i];
             abilityIcon.sprite = abilitesSprites[i];
         }
