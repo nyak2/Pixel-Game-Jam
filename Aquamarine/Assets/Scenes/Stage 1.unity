@@ -11121,7 +11121,7 @@ Transform:
   m_GameObject: {fileID: 979768707}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.52, y: -2.991, z: 0}
+  m_LocalPosition: {x: -4.47, y: -2.991, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30168,6 +30168,10 @@ PrefabInstance:
       propertyPath: loseSfx
       value: 
       objectReference: {fileID: 993789418}
+    - target: {fileID: 1831245460192568813, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
+      propertyPath: blackScreenObject
+      value: 
+      objectReference: {fileID: 634719706}
     - target: {fileID: 4128531775170435790, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: m_Name
       value: Player

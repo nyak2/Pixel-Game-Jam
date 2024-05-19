@@ -9390,6 +9390,10 @@ PrefabInstance:
       propertyPath: fakePlayer
       value: 
       objectReference: {fileID: 1101809820}
+    - target: {fileID: 1831245460192568813, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
+      propertyPath: blackScreenObject
+      value: 
+      objectReference: {fileID: 349318646}
     - target: {fileID: 3061271536368605589, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: m_FlipX
       value: 0

@@ -1,10 +1,8 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using Unity.VisualScripting;
 using UnityEngine;
-using static TMPro.TMP_Compatibility;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -36,6 +34,7 @@ public class Player : MonoBehaviour
     public float slowFactor = 1.75f;
 
     [SerializeField] private GameObject shieldObject;
+    [SerializeField] private Image blackScreenObject;
     private GameObject tempObject;
     private bool isRunning;
 
@@ -49,6 +48,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        blackScreenObject.CrossFadeAlpha(0, 0.3f, false);
         instance = this;
         _collider = GetComponent<Collider2D>();
         SetRespawnPoint(transform.position);
