@@ -13,8 +13,7 @@ public class PuddleBuddyStatue : MonoBehaviour
     {
         if (!touched)
         {
-            player._active = false;
-            player.GetComponent<Animator>().Play("idle", 0, 0);
+            player.SetPlayerInactive();
             if (dialogue != null)
             {
                 StartCoroutine(BeginDialogue());

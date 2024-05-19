@@ -9,19 +9,23 @@ public class Shrine : MonoBehaviour
     private bool saved = false;
     [SerializeField] private GameObject savetext;
     [SerializeField] private AudioSource checkpointSfx;
+    [SerializeField] private Dialogue dialogue;
+    [SerializeField] private Player player;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!saved)
-        {
-            var player = collision.GetComponent<Player>();
-            if (player != null)
+        {          
+            checkpointSfx.Play();
+            player.SetRespawnPoint(player.transform.position);
+            saved = true;
+            if (dialogue != null)
             {
-                checkpointSfx.Play();
-                player.SetRespawnPoint(player.transform.position);
-                saved = true;
-                StartCoroutine(ShowSaveText());
+                player.SetPlayerInactive();
+                StartCoroutine(BeginDialogue());           
             }
+
+            StartCoroutine(ShowSaveText());          
         }
         
     }
@@ -35,4 +39,15 @@ public class Shrine : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         savetext.transform.position = tempos;
     }
+
+    private IEnumerator BeginDialogue()
+    {
+        dialogue.StartDialogue();
+        while (dialogue.started)
+        {
+            yield return null;
+        }
+        player._active = true;
+    }
+
 }

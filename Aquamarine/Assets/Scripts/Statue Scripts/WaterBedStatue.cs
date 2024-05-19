@@ -13,9 +13,8 @@ public class WaterBedStatue : MonoBehaviour
     {
         if (!touched)
         {
-            player._active = false;
-            player.GetComponent<Animator>().Play("idle", 0, 0);
-            if(dialogue != null)
+            player.SetPlayerInactive();
+            if (dialogue != null)
             {
                 StartCoroutine(BeginDialogue());
             }

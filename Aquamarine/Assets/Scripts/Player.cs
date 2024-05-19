@@ -149,6 +149,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void SetPlayerInactive()
+    {
+        _active = false;
+        instance.GetComponent<Animator>().Play("idle", 0, 0);
+    }
+
     public bool isGrounded()
     {
         return Physics2D.OverlapBox(groundCheck.position, size, 0, groundLayer);
