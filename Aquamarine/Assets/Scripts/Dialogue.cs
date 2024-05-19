@@ -30,7 +30,7 @@ public class Dialogue : MonoBehaviour
 
     private void Awake()
     {
-        blackScreenObject.CrossFadeAlpha(0, 0.3f, false);
+        blackScreenObject.CrossFadeAlpha(0, 0.2f, false);
         ToggleWindow(false);
     }
 

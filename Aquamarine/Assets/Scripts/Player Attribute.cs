@@ -14,7 +14,7 @@ public class PlayerAttribute : MonoBehaviour
     private static bool isAbilityBeingUsed = false;
     private int i = 0;
     [SerializeField] float spawnOffSet = 1.32f;
-    [SerializeField] float spawnOffSetBlock ;
+    [SerializeField] float spawnOffSetWaterSource ;
 
     [SerializeField] private Transform waterCheck;
     [SerializeField] private LayerMask waterLayer;
@@ -205,9 +205,9 @@ public class PlayerAttribute : MonoBehaviour
     private IEnumerator StartSpawnWaterSource()
     {
         ClearCurrentAbilityObject("Movable Water Source(Clone)");
-        Vector2 spawnPos = ObtainSpawnPosition();
+        Vector2 spawnPos = ObtainSpawnPositionWaterSource();
         
-        GameObject tempWaterSource = Instantiate(waterSource, new Vector3(spawnPos.x + spawnOffSetBlock,spawnPos.y,0), Quaternion.identity);
+        GameObject tempWaterSource = Instantiate(waterSource, new Vector3(spawnPos.x,spawnPos.y,0), Quaternion.identity);
         ChangeAbilityUsageStatus(false);
         yield return new WaitForSeconds(10.0f);
         Destroy(tempWaterSource);
@@ -236,6 +236,11 @@ public class PlayerAttribute : MonoBehaviour
     private Vector2 ObtainSpawnPosition()
     {
         return new Vector2(waterCheck.position.x, waterCheck.position.y + spawnOffSet);
+    }
+
+    private Vector2 ObtainSpawnPositionWaterSource()
+    {
+        return new Vector2(waterCheck.position.x, waterCheck.position.y + 0.1f);
     }
 
     public void EnableAbility()

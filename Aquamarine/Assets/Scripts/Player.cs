@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     private bool isJumping;
     [SerializeField] private Vector3 size;
     private float tempJumpPower;
+    private float oritempJumpPower;
     public float slowFactor = 1.75f;
 
     [SerializeField] private GameObject shieldObject;
@@ -57,6 +58,7 @@ public class Player : MonoBehaviour
             fakePlayer.transform.position = fakePlayerPos;
         }
         tempJumpPower = jumpingPower;
+        oritempJumpPower = jumpingPower;
     }
 
     // Update is called once per frame
@@ -306,7 +308,11 @@ public class Player : MonoBehaviour
 
     public void CheckJumpPower()
     {
-        tempJumpPower= jumpingPower;
+        if (!_isProtected)
+        {
+            jumpingPower = oritempJumpPower;
+        }
+        tempJumpPower = jumpingPower;
         if (PlayerAttribute.instance.IsOnWaterSource() || PlayerAttribute.instance.IsOnWaterPlatform())
             jumpingPower *= jumpingMultiplier;
     }

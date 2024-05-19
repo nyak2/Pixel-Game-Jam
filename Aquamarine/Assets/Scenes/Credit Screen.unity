@@ -1160,8 +1160,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Music
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
-  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
+  m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1294,8 +1294,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: by Mixkit/Pixabay
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
-  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
+  m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1429,8 +1429,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tilesets
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
-  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
+  m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1563,8 +1563,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Jun Xi
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
-  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
+  m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1655,7 +1655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &298094466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1992,8 +1992,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Aik Chun
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
-  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
+  m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2194,8 +2194,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Additional Assets
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
-  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
+  m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2418,8 +2418,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
-  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
+  m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2681,8 +2681,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Programmer/Artist
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
-  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
+  m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2815,8 +2815,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Thank you For playing
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
-  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
+  m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2950,8 +2950,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Lead Programmer/Designer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
-  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
+  m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3541,8 +3541,8 @@ MonoBehaviour:
   m_text: "Adventure \nby Alexander Nakarada\n\n Wintersong \nby Alexander Nakarada
     \n\n A Time Forgotten \nby Darren Curtis "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
-  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
+  m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3779,7 +3779,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -898}
+  m_AnchoredPosition: {x: 0, y: -873}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1871986321
@@ -4080,8 +4080,8 @@ MonoBehaviour:
 
     by Anokolisa'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
-  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
+  m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4513,8 +4513,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: SFX
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
-  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
+  m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
