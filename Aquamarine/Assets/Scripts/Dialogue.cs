@@ -45,7 +45,7 @@ public class Dialogue : MonoBehaviour
         {
             //textObject.SetActive(show);
             //blackScreenObject.gameObject.SetActive(show);
-
+            yield return new WaitForSeconds(0.25f);
             blackScreenObject.CrossFadeAlpha(1, 0.5f, false);
             yield return new WaitForSeconds(0.4f);
             dialogueText.CrossFadeAlpha(1,0.4f,false);
