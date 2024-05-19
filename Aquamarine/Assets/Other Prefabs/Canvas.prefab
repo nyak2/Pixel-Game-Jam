@@ -457,11 +457,11 @@ RectTransform:
   m_Children:
   - {fileID: 7352063553904812723}
   - {fileID: 6667095561159874372}
-  - {fileID: 1812892929195460238}
   - {fileID: 7189492975781495206}
   - {fileID: 8192847474388466194}
   - {fileID: 2245214534101192936}
   - {fileID: 2003094422786773697}
+  - {fileID: 1812892929195460238}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -624,8 +624,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1181,7 +1181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

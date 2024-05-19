@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioSource loseSfx;
     [SerializeField] private AudioSource runSfx;
     [SerializeField] private AudioSource jumpSfx;
+    [SerializeField] private AudioSource failSfx;
     [SerializeField] private AudioClip normalRunClip;
     [SerializeField] private AudioClip puddleRunClip;
 
@@ -206,12 +207,14 @@ public class Player : MonoBehaviour
     public void MakeProtected()
     {
         tempObject = Instantiate(shieldObject, transform);
+        PlayerAttribute.instance.StartFlashtext(true);
         // TODO: Instantiate a shield object here
         _isProtected = true;
     }
 
     public void MakeUnProtected()
     {
+        PlayerAttribute.instance.StartFlashtext(false);
         Destroy(tempObject);
         // TODO: Remove the shield object here
         if (_isProtected)
@@ -249,7 +252,8 @@ public class Player : MonoBehaviour
         }
         else
         {
-            Debug.Log("Cannot Teleport!");
+            PlayerAttribute.instance.abilitysfx.Stop();
+            failSfx.Play();
         }
         
     }

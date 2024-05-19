@@ -14,6 +14,7 @@ public class PlayerAttribute : MonoBehaviour
     private static bool isAbilityBeingUsed = false;
     private int i = 0;
     [SerializeField] float spawnOffSet = 1.32f;
+    [SerializeField] float spawnOffSetBlock ;
 
     [SerializeField] private Transform waterCheck;
     [SerializeField] private LayerMask waterLayer;
@@ -28,8 +29,10 @@ public class PlayerAttribute : MonoBehaviour
     [SerializeField] private TextMeshProUGUI flashText;
     [SerializeField] private Vector3 size;
 
+    private Coroutine coroutineWaterPlatform = null;
+
     [Header("Audio Sources")]
-    [SerializeField] private AudioSource abilitysfx;
+    [SerializeField] public AudioSource abilitysfx;
     [SerializeField] private AudioSource cancelAbilitySfx;
     [SerializeField] private AudioSource abilitySelectSfx;
 
@@ -176,7 +179,6 @@ public class PlayerAttribute : MonoBehaviour
         }
         Player.instance.MakeUnProtected();
         flashText.gameObject.SetActive(false);
-        Thread.Sleep(100);
         ChangeAbilityUsageStatus(false);
     }
 
@@ -197,7 +199,7 @@ public class PlayerAttribute : MonoBehaviour
 
     public void SpawnWaterSource()
     {
-        StartCoroutine(StartSpawnWaterSource());
+      StartCoroutine(StartSpawnWaterSource());
     }
 
     private IEnumerator StartSpawnWaterSource()
@@ -205,7 +207,7 @@ public class PlayerAttribute : MonoBehaviour
         ClearCurrentAbilityObject("Movable Water Source(Clone)");
         Vector2 spawnPos = ObtainSpawnPosition();
         
-        GameObject tempWaterSource = Instantiate(waterSource, new Vector3(spawnPos.x,spawnPos.y - spawnOffSet,0), Quaternion.identity);
+        GameObject tempWaterSource = Instantiate(waterSource, new Vector3(spawnPos.x + spawnOffSetBlock,spawnPos.y,0), Quaternion.identity);
         ChangeAbilityUsageStatus(false);
         yield return new WaitForSeconds(10.0f);
         Destroy(tempWaterSource);
@@ -214,7 +216,7 @@ public class PlayerAttribute : MonoBehaviour
 
     public void SpawnWaterPlatform()
     {
-        StartCoroutine(StartSpawnWaterPlatform());
+        coroutineWaterPlatform = StartCoroutine(StartSpawnWaterPlatform());
     }
 
     private IEnumerator StartSpawnWaterPlatform()
@@ -238,7 +240,7 @@ public class PlayerAttribute : MonoBehaviour
 
     public void EnableAbility()
     {
-        StopAllCoroutines();
+        //StopAllCoroutines();
         if (!isAbilityBeingUsed)
         {
             abilitysfx.Play();
@@ -246,10 +248,16 @@ public class PlayerAttribute : MonoBehaviour
         }
         else
         {
+            StopCoroutine(coroutineWaterPlatform);
             cancelAbilitySfx.Play();
             // Clears All Abilities if Use Ability is Pressed While An Ability is Being Used.
             ClearAllAbilities();
         }
+    }
+
+    public void StartFlashtext(bool show)
+    {
+        flashText.gameObject.SetActive(show);
     }
 
     private void OnDrawGizmos()

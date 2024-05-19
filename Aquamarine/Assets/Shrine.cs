@@ -30,7 +30,7 @@ public class Shrine : MonoBehaviour
     {
         Vector3 tempos = savetext.transform.position;
         LeanTween.moveLocalX(savetext, 0 , 0.5f).setEaseOutBack();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.5f);
         LeanTween.moveLocalX(savetext, -1367 , 0.5f).setEaseInBack();
         yield return new WaitForSeconds(1.0f);
         savetext.transform.position = tempos;

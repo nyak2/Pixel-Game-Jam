@@ -8940,6 +8940,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!82 &345879250 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7702796864505384154, guid: 93e188cee1907f142ae3e36248bcb3fe, type: 3}
+  m_PrefabInstance: {fileID: 1883288050}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &349318643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8956,21 +8961,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2245214534101192936, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 245
+      objectReference: {fileID: 0}
     - target: {fileID: 4528099222020212322, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
       propertyPath: m_fontColor.b
-      value: 0.7882353
+      value: 0.8980392
       objectReference: {fileID: 0}
     - target: {fileID: 4528099222020212322, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
       propertyPath: m_fontColor.g
-      value: 0.8
+      value: 0.6117647
       objectReference: {fileID: 0}
     - target: {fileID: 4528099222020212322, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
       propertyPath: m_fontColor.r
-      value: 0.13333334
+      value: 0.15686275
       objectReference: {fileID: 0}
     - target: {fileID: 4528099222020212322, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4291415074
+      value: 4293237800
       objectReference: {fileID: 0}
     - target: {fileID: 5168317522833811555, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
       propertyPath: m_Pivot.x
@@ -9052,33 +9061,56 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6496695071928753453, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.23921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496695071928753453, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496695071928753453, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.85882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496695071928753453, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4282232283
+      objectReference: {fileID: 0}
     - target: {fileID: 6843475877610508330, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
       propertyPath: m_fontColor.b
-      value: 0.7882353
+      value: 0.8962264
       objectReference: {fileID: 0}
     - target: {fileID: 6843475877610508330, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
       propertyPath: m_fontColor.g
-      value: 0.8
+      value: 0.6099906
       objectReference: {fileID: 0}
     - target: {fileID: 6843475877610508330, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
       propertyPath: m_fontColor.r
-      value: 0.13333334
+      value: 0.15641688
       objectReference: {fileID: 0}
     - target: {fileID: 6843475877610508330, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4291415074
+      value: 4293237800
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192847474388466194, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 245
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 766088805906854615, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1362334754}
   m_SourcePrefab: {fileID: 100100000, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
 --- !u!114 &349318644 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5524118994415106386, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
   m_PrefabInstance: {fileID: 349318643}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1362334753}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -9138,11 +9170,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 721451118495544226, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.72
+      value: -5.36
       objectReference: {fileID: 0}
     - target: {fileID: 721451118495544226, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.06
+      value: -3.151
       objectReference: {fileID: 0}
     - target: {fileID: 721451118495544226, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9180,6 +9212,10 @@ PrefabInstance:
       propertyPath: runSfx
       value: 
       objectReference: {fileID: 1883288052}
+    - target: {fileID: 1831245460192568813, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
+      propertyPath: failSfx
+      value: 
+      objectReference: {fileID: 345879250}
     - target: {fileID: 1831245460192568813, guid: 2ab13ee2868c72f499bdb2307d0cae79, type: 3}
       propertyPath: jumpSfx
       value: 
@@ -16106,6 +16142,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1362334753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 766088805906854615, guid: 05a52d57eef18944e8e1439b4421069a, type: 3}
+  m_PrefabInstance: {fileID: 349318643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1362334754
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362334753}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f80f6d7db32002744ad2f0a61c081523, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!82 &1363849855 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 8074119236047714229, guid: 93e188cee1907f142ae3e36248bcb3fe, type: 3}
@@ -42711,7 +42773,7 @@ Tilemap:
   - m_RefCount: 1298
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
-  m_AnimationFrameRate: 1
+  m_AnimationFrameRate: 6
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -36, y: -5, z: 0}
   m_Size: {x: 90, y: 34, z: 1}

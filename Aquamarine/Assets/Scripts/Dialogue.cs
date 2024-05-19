@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
 
 public class Dialogue : MonoBehaviour
@@ -31,7 +30,7 @@ public class Dialogue : MonoBehaviour
 
     private void Awake()
     {
-        blackScreenObject.CrossFadeAlpha(0, 0.2f, false);
+        blackScreenObject.CrossFadeAlpha(0, 0.3f, false);
         ToggleWindow(false);
     }
 
@@ -49,7 +48,7 @@ public class Dialogue : MonoBehaviour
             //blackScreenObject.gameObject.SetActive(show);
 
             blackScreenObject.CrossFadeAlpha(1, 0.5f, false);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.4f);
             dialogueText.CrossFadeAlpha(1,0.4f,false);
         }
         else
@@ -97,7 +96,7 @@ public class Dialogue : MonoBehaviour
     {
         Vector3 tempos = showAbilityText.transform.position;
         LeanTween.moveLocalX(showAbilityText, 0, 0.5f).setEaseOutBack();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.5f);
         LeanTween.moveLocalX(showAbilityText, -1367, 0.5f).setEaseInBack();
         yield return new WaitForSeconds(1.0f);
         showAbilityText.transform.position = tempos;

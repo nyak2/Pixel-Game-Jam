@@ -181,7 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1da453cae3cb1f42bd8d59bf3f01b15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnOffSet: 0.99
+  spawnOffSet: 1.07
+  spawnOffSetBlock: 0.8
   waterCheck: {fileID: 3280119350407571325}
   waterLayer:
     serializedVersion: 2
@@ -202,6 +203,7 @@ MonoBehaviour:
   size: {x: 0.45, y: 0.25, z: 0}
   abilitysfx: {fileID: 0}
   cancelAbilitySfx: {fileID: 0}
+  abilitySelectSfx: {fileID: 0}
 --- !u!61 &4058576702094806307
 BoxCollider2D:
   m_ObjectHideFlags: 0
