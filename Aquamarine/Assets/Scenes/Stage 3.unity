@@ -40988,8 +40988,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Ability: Puddle Buddy Obtained!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
-  m_sharedMaterial: {fileID: -9025482659227526491, guid: 4c6bb0e7715138f4793b0ea9a0c4dc38, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
+  m_sharedMaterial: {fileID: -3778433800116558007, guid: 1e410bb694fbd93449467eeb24f4770d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
